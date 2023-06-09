@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { BrowserRouter, Outlet, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom'
+import Landing from './Screen/Landing'
 
-function App() {
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Landing />,
+    // children: [
+    //   {
+    //     path: "landing",
+    //     element: <Landing />,
+    //   },
+    // ]
+  },
+  {
+    path: "/landing",
+    element: <Landing />
+  }
+]);
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <br />
-        <br />
-        <a
-          className="App-link"
-          href="https://github.com/beingrohit-exe"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Git Profile
-        </a>
-      </header>
-    </div>
-  );
+    <RouterProvider router={router} />
+  )
 }
 
-export default App;
+export default App
