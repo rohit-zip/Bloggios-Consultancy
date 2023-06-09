@@ -1,0 +1,57 @@
+:root {
+    --icon-color: rgba(0, 0, 0, 0.5);
+    --icon-hover-color: rgba(0, 0, 0, 1);
+    --active-color: #38208e
+}
+
+.bottom-bar-main-div {
+    position: fixed;
+    width: auto;
+    min-width: 500px;
+    height: auto;
+    background-color: #f2f4f5;
+    bottom: 2vh;
+    left: 50%;
+    overflow: hidden;
+    padding: 12px;
+    margin: 0;
+    transform: translatex(-50%);
+    border-radius: 50px;
+    justify-content: space-between;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.icon {
+    font-size: 34px;
+    padding: 16px;
+    color: var(--icon-color);
+}
+
+.icon:hover {
+    color: var(--icon-hover-color);
+}
+
+
+
+.active{
+    background-color: var(--active-color);
+    border-radius: 50%;
+    transition: background-color 400ms ease-in-out;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .bottom-bar-main-div{
+        width: 90vw;
+        min-width: 0;
+        padding: 7px;
+    }
+
+    .icon{
+        font-size: 25px;
+        padding: 10px;
+    }
+}

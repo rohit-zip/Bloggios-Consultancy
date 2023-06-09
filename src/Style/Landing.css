@@ -4,5 +4,9 @@
 }
 
 body {
-    background-color: black !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.landing-div {
+    height: 200vh;
 }
