@@ -1,6 +1,5 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './BottomBar.css'
-import {NavLink} from "react-router-dom";
 
 const BottomBar = () => {
 
@@ -44,11 +43,11 @@ const BottomBar = () => {
                             <a
                                 key={key}
                                 href={value.to}
-                                className={isActive===value.name ? 'active' : ''}
-                                onClick={()=> setIsActive(value.name)}
+                                className={isActive === value.name ? 'active' : ''}
+                                onClick={() => setIsActive(value.name)}
                             >
-                                <i className={`${value.icon}`} style={{color: isActive===value.name ? 'white' : 'black'}}></i>
-                                <span style={{display: "none"}}>{value.name}</span>
+                                <i className={`${value.icon}`} style={{ color: isActive === value.name ? 'white' : 'black' }}></i>
+                                <span style={{ display: "none" }}>{value.name}</span>
                             </a>
                         </div>
                     )

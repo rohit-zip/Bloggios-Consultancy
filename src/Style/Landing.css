@@ -4,9 +4,51 @@
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0.8) !important;
+    background-image: url(../Asset/Svg/sun-tornado.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .landing-div {
     height: 200vh;
+    position: relative;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #959595 #E9EBE9;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+    margin-right: 2px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background-color: #E9EBE9;
+}
+
+*::-webkit-scrollbar-track:hover {
+    background-color: #DDDDDD;
+}
+
+*::-webkit-scrollbar-track:active {
+    background-color: #C2C2C2;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #959595;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #757575;
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background-color: #4E4E4E;
 }
