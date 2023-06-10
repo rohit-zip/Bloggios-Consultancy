@@ -1,10 +1,9 @@
-import Lottie from 'lottie-react'
 import React from 'react'
-import { useRef } from 'react';
-import bloggios_logo from '../Asset/Lottie/a2.json'
-import { useEffect } from 'react';
 import '../Style/Landing.css'
 import BottomBar from '../Component/Bottom-Bar/BottomBar';
+import TopBar from "../Component/TopBar/TopBar";
+import useWindowDimensions from '../Logic/WindowDimensions';
+import MobileTopBar from '../Component/TopBar/MobileTopBar';
 
 const Landing = () => {
     // const isPlay = true;
@@ -16,9 +15,12 @@ const Landing = () => {
     //     <Lottie lottieRef={lottieRef} animationData={bloggios_logo} />
     // )
 
+    const { width, height } = useWindowDimensions();
+
     return (
         <div className='landing-div' >
-            <BottomBar />
+            {/*<BottomBar />*/}
+            {width > 775 ? <TopBar /> : <MobileTopBar />}
         </div>
     )
 }

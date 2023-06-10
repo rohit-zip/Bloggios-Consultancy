@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Outlet, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom'
+import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Landing from './Screen/Landing'
 
 const router = createBrowserRouter([

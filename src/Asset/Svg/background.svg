@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" width="700" height="700"><defs><radialGradient id="gggrain-gradient" r="0.6">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 700 700" width="700" height="700"><defs><radialGradient id="gggrain-gradient" r="0.6">
       <stop offset="0%" stop-color="hsl(256, 96%, 10%)"></stop>
       <stop offset="50%" stop-color="hsl(229, 87%, 3%)"></stop>
       <stop offset="100%" stop-color="hsla(0, 0%, 0%, 1.00)"></stop>
