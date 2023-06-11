@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './TopBar.css'
 import b_logo from '../../Asset/Svg/bloggios1.svg'
+import DropdownContent from './DropdownContent';
 
 const TopBar = () => {
 
@@ -26,13 +27,15 @@ const TopBar = () => {
         <div className={`navbar-main-div col-lg-10 col-md-10 col-sm-12 col-xl-10 offset-lg-1 offset-md-1 offset-xl-1 ${scrolled && 'scrolled'}`}>
             <img src={b_logo} alt="B" />
             <div className='mx-auto d-flex flex-row navbar-links-div'>
-                <div className='d-flex flex-row justify-content-center align-items-center links'
+                <div className='d-flex flex-row justify-content-center align-items-center links dropdown-button'
                     style={{ gap: '10px', color: 'white' }}
                     onMouseEnter={() => setIsShown(true)}
                     onMouseLeave={() => setIsShown(false)}
                 >
-                    <a href="">Solutions</a>
-                    <i class={`fa-solid fa-chevron-down ${isShown && 'fa-rotate-180'}`}></i>
+                    <a className='solutions' href="">Solutions</a>
+                    <i className='solutions' class={`fa-solid fa-chevron-down ${isShown && 'fa-rotate-180'}`}></i>
+                    {/* <DropdownContent /> */}
+                    <div className='dropdown-content'>DropdownContent</div>
                 </div>
                 <a className='links' href="">About</a>
                 <a className='links' href="">Portfolio</a>

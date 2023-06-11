@@ -1,0 +1,10 @@
+.dropdown-content {
+    position: absolute;
+    background-color: aliceblue;
+    top: 100%;
+    left: 0;
+    height: 10vh;
+    width: 20vw;
+    display: none;
+    transition: 400ms;
+}
