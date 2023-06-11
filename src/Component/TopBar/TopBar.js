@@ -34,8 +34,8 @@ const TopBar = () => {
                 >
                     <a className='solutions' href="">Solutions</a>
                     <i className='solutions' class={`fa-solid fa-chevron-down ${isShown && 'fa-rotate-180'}`}></i>
-                    {/* <DropdownContent /> */}
-                    <div className='dropdown-content'>DropdownContent</div>
+                    <DropdownContent />
+                    {/* <div className='dropdown-content'>DropdownContent</div> */}
                 </div>
                 <a className='links' href="">About</a>
                 <a className='links' href="">Portfolio</a>

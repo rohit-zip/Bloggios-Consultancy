@@ -76,18 +76,19 @@ div.navbar-main-div img {
     transition: all 250ms ease;
 }
 
-div.dropdown-button>div {
+div.dropdown-button>.dropdown-content {
     position: absolute;
-    background-color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.3);
     display: flex;
     top: 100%;
-    left: 0;
+    left: -100%;
+    height: auto;
+    border-radius: 40px;
+    gap: 40px;
     padding: 20px 28px;
-    height: 0vh;
-    border-radius: 20px;
-    width: 0vw;
+    width: 500%;
     opacity: 0;
-    color: black;
+    color: rgb(255, 255, 255);
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8s);
     transition: all 250ms ease-in-out;
 }
@@ -96,6 +97,4 @@ div.dropdown-button>div {
 .dropdown-content:hover {
     pointer-events: auto;
     opacity: 1;
-    height: 10vh;
-    width: 20vw;
 }
