@@ -92,7 +92,7 @@ div.dropdown-button>div {
     transition: all 250ms ease-in-out;
 }
 
-.solutions:hover~.dropdown-content,
+.dropdown-button:hover .dropdown-content,
 .dropdown-content:hover {
     pointer-events: auto;
     opacity: 1;
