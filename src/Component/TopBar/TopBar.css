@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
+/* Main Navbar */
 div.navbar-main-div {
     position: sticky;
     height: auto;
@@ -11,25 +12,19 @@ div.navbar-main-div {
     align-items: center;
 }
 
+/* Logo */
 div.navbar-main-div img {
     height: 50px;
 }
 
-.navbar-icons {
-    font-size: 40px;
-    color: aliceblue;
-}
-
+/* div in which Links stored of Navbar (Solutions, About, Portfolio) */
 .navbar-links-div {
     gap: 10vw;
     pointer-events: none;
     transition: all 200ms ease-in-out;
 }
 
-.navbar-links-div>* {
-    pointer-events: auto;
-}
-
+/* Styling of navbar Links */
 .navbar-links-div a {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
@@ -37,26 +32,70 @@ div.navbar-main-div img {
     font-size: 25px;
     font-weight: 300;
     letter-spacing: 1px;
-    transition: all 200ms ease-in-out;
+    transition: all 250ms ease-in-out;
 }
 
+/* Styling related to Blur other links on hover */
+.navbar-links-div>a,
+.navbar-links-div>div>a,
+.navbar-links-div>div>i {
+    pointer-events: auto;
+}
+
+/* Chervon arrow for solutions link */
 .navbar-links-div div i {
-    transition: all 200ms ease-in-out;
+    transition: all 250ms ease-in-out;
 }
 
+/* For Solutions link as it stored in div */
+.navbar-links-div div {
+    transition: all 250ms ease-in-out;
+}
 
+/* Hover effect on links */
 .navbar-links-div a:hover {
     text-decoration: none;
     color: rgba(255, 255, 255, 1);
     transform: translateY(-1px);
 }
 
+/* Blurring other navbar links on hover */
 .navbar-links-div:hover>.links {
     opacity: 0.8;
     filter: blur(1px);
 }
 
+/* MAke sure hovered link not blurred */
 .navbar-links-div>.links:hover {
     opacity: 1;
     filter: blur(0px);
+}
+
+.links {
+    position: relative;
+    transition: all 250ms ease;
+}
+
+div.dropdown-button>div {
+    position: absolute;
+    background-color: aliceblue;
+    display: flex;
+    top: 100%;
+    left: 0;
+    padding: 20px 28px;
+    height: 0vh;
+    border-radius: 20px;
+    width: 0vw;
+    opacity: 0;
+    color: black;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8s);
+    transition: all 250ms ease-in-out;
+}
+
+.solutions:hover~.dropdown-content,
+.dropdown-content:hover {
+    pointer-events: auto;
+    opacity: 1;
+    height: 10vh;
+    width: 20vw;
 }
