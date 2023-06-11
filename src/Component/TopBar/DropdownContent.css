@@ -1,10 +1,49 @@
-.dropdown-content {
-    position: absolute;
-    background-color: aliceblue;
-    top: 100%;
-    left: 0;
-    height: 10vh;
-    width: 20vw;
-    display: none;
-    transition: 400ms;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.left-pane {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-pane>span {
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: cursive;
+    margin-bottom: 10px;
+}
+
+.left-pane-featured-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    border-radius: 20px;
+    transition: all 250ms ease-in-out;
+    padding: 16px 16px;
+    cursor: pointer;
+}
+
+.left-pane-featured-list:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 20px 4px rgba(255, 255, 255, 0.2);
+}
+
+span.featured-title {
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #ffff;
+    transition: all 250ms ease-in-out;
+}
+
+span.featured-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    color: #ebebeb;
+    transition: all 250ms ease-in-out;
+}
+
+.left-pane-featured-list:hover span.featured-title {
+    letter-spacing: 1px;
 }
