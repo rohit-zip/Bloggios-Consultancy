@@ -16,6 +16,29 @@ const featuredList = [
     }
 ]
 
+const subList = [
+    {
+        title: "E-Commerce",
+        subTitle: "Application allows people to buy and sell physical goods, services, etc"
+    },
+    {
+        title: "Static Website",
+        subTitle: "A website with static content, mostly ideal for Portfolio, Small Buisnesses, Menu Cards, Brochure etc"
+    },
+    {
+        title: "Custom Webapp",
+        subTitle: "An application developed on the basis of clients need and having responsive UI for compatibility on multiple devices"
+    },
+    {
+        title: "Mobile Application",
+        subTitle: "An application specifically developed for Mobile Devices containing Android and IOS"
+    },
+    {
+        title: "Development Support",
+        subTitle: "Technical support, Bug/Fix or Version Upgrade for already developed Project"
+    }
+]
+
 const DropdownContent = () => {
     return (
         <div className='dropdown-content'>
@@ -30,7 +53,19 @@ const DropdownContent = () => {
                     )
                 })}
             </div>
-            <div className="col-8">Rohit</div>
+            <div className="right-pane">
+                <span>Development and Support</span>
+                <div>
+                    {subList.map((value, key) => {
+                        return (
+                            <div key={key} className='right-pane-list'>
+                                <span className="sub-list-title">{value.title}</span>
+                                <span className="sub-list-subtitle">{value.subTitle}</span>
+                            </div>
+                        )
+                    })}
+                </div>
+            </div>
         </div>
     )
 }
