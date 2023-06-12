@@ -1,22 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
 
 .left-pane {
     display: flex;
     flex-direction: column;
 }
 
-.left-pane>span {
-    font-size: 25px;
+::selection {
+    user-select: none;
+}
+
+div.left-pane>span,
+div.right-pane>span {
+    font-size: calc(0.25vw + 0.25vh + 2vmin);
+    /* font-size: 25px; */
     font-weight: 700;
     letter-spacing: 1px;
-    font-family: cursive;
+    font-family: 'Poppins', serif;
     margin-bottom: 10px;
 }
 
 .left-pane-featured-list {
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    margin-top: calc(0.20vw + 0.20vh + 2vmin);
     border-radius: 20px;
     transition: all 250ms ease-in-out;
     padding: 16px 16px;
@@ -29,7 +35,8 @@
 }
 
 span.featured-title {
-    font-size: 25px;
+    /* font-size: 25px; */
+    font-size: calc(0.25vw + 0.25vh + 2vmin);
     font-weight: 600;
     font-family: 'Poppins', sans-serif;
     color: #ffff;
@@ -37,7 +44,8 @@ span.featured-title {
 }
 
 span.featured-subtitle {
-    font-size: 14px;
+    font-size: calc(0.07vw + 0.07vh + 1.4vmin);
+    /* 14px */
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
     color: #ebebeb;
@@ -46,4 +54,51 @@ span.featured-subtitle {
 
 .left-pane-featured-list:hover span.featured-title {
     letter-spacing: 1px;
+}
+
+div.right-pane {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+div.right-pane>.development-technologies>.individual {
+    display: flex;
+    background-color: #0000;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+    gap: 20px;
+}
+
+div.right-pane-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+div.right-pane-list:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 20px 4px rgba(255, 255, 255, 0.2);
+}
+
+div.right-pane-list:hover>.sub-list-title {
+    letter-spacing: 1px;
+}
+
+div.right-pane-list>.sub-list-title {
+    font-size: calc(0.11vw + 0.11vh + 1.6vmin);
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    transition: all 250ms ease-in-out;
+}
+
+div.right-pane-list>.sub-list-subtitle {
+    font-size: calc(0.08vw + 0.08vh + 1vmin);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }

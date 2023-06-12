@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+div.mobile-top-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0 20px;
+    z-index: 2;
+    transition: all 250ms ease-in-out;
+}
+
+div.burger-shown {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+div.mobile-top-bar img {
+    height: 5vh;
+    pointer-events: auto;
+}
+
+div.mobile-top-bar i {
+    color: #f9f9f9;
+    font-size: 28px;
+    transition: all 250ms ease-in-out;
+}
+
+.menu-content {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    padding: 20px 20px;
+    gap: 20px;
+    top: -6vh;
+    opacity: 0;
+    z-index: -1;
+    transition: all 250ms ease-in-out;
+}
+
+div.active-burger {
+    opacity: 1;
+    top: 8vh;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.menu-content span {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    color: #f9f9f9;
+    font-weight: 600;
+}
+
+.menu-content div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}

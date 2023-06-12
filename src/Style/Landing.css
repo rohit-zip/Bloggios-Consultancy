@@ -8,6 +8,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    user-select: contain;
 }
 
 .landing-div {
@@ -51,4 +52,18 @@ body {
 
 *::-webkit-scrollbar-thumb:active {
     background-color: #4E4E4E;
+}
+
+@media only screen and (max-width: 775px) {
+    * {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    body {
+        background-size: cover;
+        background-repeat: repeat-y;
+        background-attachment: scroll;
+    }
 }

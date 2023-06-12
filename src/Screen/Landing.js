@@ -18,7 +18,7 @@ const Landing = () => {
     const { width, height } = useWindowDimensions();
 
     return (
-        <div className='landing-div' >
+        <div className='landing-div' style={{ color: "white" }} >
             {/*<BottomBar />*/}
             {width > 775 ? <TopBar /> : <MobileTopBar />}
         </div>
