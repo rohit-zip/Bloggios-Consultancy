@@ -9,49 +9,13 @@ body {
     background-size: cover;
     background-attachment: fixed;
     user-select: contain;
+
+    overflow-y: overlay;
 }
 
 .landing-div {
     height: 200vh;
     position: relative;
-}
-
-/* Firefox */
-* {
-    scrollbar-width: thin;
-    scrollbar-color: #959595 #E9EBE9;
-}
-
-/* Chrome, Edge and Safari */
-*::-webkit-scrollbar {
-    width: 10px;
-    margin-right: 2px;
-}
-
-*::-webkit-scrollbar-track {
-    border-radius: 20px;
-    background-color: #E9EBE9;
-}
-
-*::-webkit-scrollbar-track:hover {
-    background-color: #DDDDDD;
-}
-
-*::-webkit-scrollbar-track:active {
-    background-color: #C2C2C2;
-}
-
-*::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    background-color: #959595;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-    background-color: #757575;
-}
-
-*::-webkit-scrollbar-thumb:active {
-    background-color: #4E4E4E;
 }
 
 @media only screen and (max-width: 775px) {
@@ -66,4 +30,50 @@ body {
         background-repeat: repeat-y;
         background-attachment: scroll;
     }
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 0px solid #aa3131;
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #8c8c8c;
+}
+
+::-webkit-scrollbar-track {
+    background: #666666;
+    border: 0px solid #521e1e;
+    border-radius: 0px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #666666;
+}
+
+::-webkit-scrollbar-track:active {
+    background: #666666;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
 }

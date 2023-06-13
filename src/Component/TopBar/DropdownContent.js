@@ -40,8 +40,9 @@ const subList = [
 ]
 
 const DropdownContent = () => {
+
     return (
-        <div className='dropdown-content'>
+        <div className='dropdown-content' style={{ zIndex: 1 }}>
             <div className="col-4 left-pane">
                 <span className="dropdown-content-header-left-pane">Featured</span>
                 {featuredList.map((value, key) => {
