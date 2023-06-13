@@ -50,7 +50,7 @@ const MobileTopBar = () => {
 
     return (
         <>
-            <div className={`d-flex mobile-top-bar ${isShown && 'burger-shown'}`}>
+            <div className={`mobile-top-bar ${isShown && 'burger-shown'}`}>
                 <img src={bloggios_logo} alt='B' />
                 <i onClick={() => handleBurgerShown(!isShown)} className={`fa-solid ${isShown ? 'fa-xmark' : 'fa-bars'}`}></i>
             </div>
@@ -68,14 +68,11 @@ const MobileTopBar = () => {
                     <i class={`fa-solid fa-chevron-right ${solutionsShown && 'fa-rotate-90'}`}></i>
                 </div>
             </div>
-
             <div className={`d-flex row row-cols-2 g-4 justify-content-between align-items-center items-main-div ${solutionsShown && 'active-solutions'}`}>
                 {featuredList.map((value, key) => {
                     return (
-                        <div key={key} className="col d-flex justify-content-between align-items-center flex-row" >
+                        <div key={key} className="d-flex justify-content-between align-items-center flex-row" >
                             <span>{value.title}</span>
-                            <span>&nbsp;</span>
-                            <span>&nbsp;</span>
                             <i className="fa-solid fa-up-right-from-square"></i>
                         </div>
                     )

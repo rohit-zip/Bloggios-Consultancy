@@ -22,15 +22,18 @@ div.right-pane>span {
 .left-pane-featured-list {
     display: flex;
     flex-direction: column;
-    margin-top: calc(0.20vw + 0.20vh + 2vmin);
+    margin-top: calc(0.14vw + 0.14vh + 1.4vmin);
     border-radius: 20px;
     transition: all 250ms ease-in-out;
     padding: 16px 16px;
     cursor: pointer;
+    border-color: #0000;
+    border-width: 2px;
+    border-style: solid;
 }
 
 .left-pane-featured-list:hover {
-    background-color: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
     box-shadow: 1px 1px 20px 4px rgba(255, 255, 255, 0.2);
 }
 
@@ -78,11 +81,14 @@ div.right-pane-list {
     border-radius: 20px;
     padding: 10px;
     cursor: pointer;
+    border-color: #0000;
+    border-width: 2px;
+    border-style: solid;
     transition: all 250ms ease-in-out;
 }
 
 div.right-pane-list:hover {
-    background-color: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
     box-shadow: 1px 1px 20px 4px rgba(255, 255, 255, 0.2);
 }
 

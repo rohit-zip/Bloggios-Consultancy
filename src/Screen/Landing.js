@@ -22,11 +22,11 @@ const Landing = () => {
         <div className='landing-div' style={{ color: "white" }} >
             {/*<BottomBar />*/}
             {width > 775 ? <TopBar /> : <MobileTopBar />}
-            <div className='d-flex'>
-                <div className="col-4">
+            <div className='bg-info container-fluid'>
+                <div className="col-4 bg-success">
                     Rohit
                 </div>
-                <div className="col-8 bg-success">
+                <div className="col-12 bg-body">
                     Rohit
                 </div>
             </div>
