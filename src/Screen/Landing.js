@@ -4,6 +4,7 @@ import BottomBar from '../Component/Bottom-Bar/BottomBar';
 import TopBar from "../Component/TopBar/TopBar";
 import useWindowDimensions from '../Logic/WindowDimensions';
 import MobileTopBar from '../Component/TopBar/MobileTopBar';
+import LottieAnimation from '../Component/Landing/LottieAnimation';
 
 const Landing = () => {
     // const isPlay = true;
@@ -21,6 +22,14 @@ const Landing = () => {
         <div className='landing-div' style={{ color: "white" }} >
             {/*<BottomBar />*/}
             {width > 775 ? <TopBar /> : <MobileTopBar />}
+            <div className='d-flex'>
+                <div className="col-4">
+                    Rohit
+                </div>
+                <div className="col-8 bg-success">
+                    Rohit
+                </div>
+            </div>
         </div>
     )
 }
