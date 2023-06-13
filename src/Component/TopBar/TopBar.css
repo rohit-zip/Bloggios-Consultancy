@@ -78,13 +78,13 @@ div.navbar-main-div img {
 
 div.dropdown-button>.dropdown-content {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 1);
     display: flex;
     top: 100%;
     left: -100%;
     height: auto;
     border-radius: 40px;
-    gap: 70px;
+    gap: 50px;
     padding: 20px 28px;
     width: 500%;
     opacity: 0;
