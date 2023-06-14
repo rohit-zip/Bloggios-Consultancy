@@ -5,5 +5,5 @@
 
 ### June-11
 <div align="center">
-<img src="https://github.com/beingrohit-exe/Bloggios-Learning-Platform-Frontend-React/blob/main/GithubImages/June-11(1).png" width="1000" />&nbsp;<img src="https://github.com/beingrohit-exe/Bloggios-Learning-Platform-Frontend-React/blob/main/GithubImages/June-11(2).png" width="1000" />
+<img src="https://github.com/beingrohit-exe/Bloggios-Learning-Platform-Frontend-React/blob/main/GithubImages/June-11(1).png" width="1000" />
 </div>
