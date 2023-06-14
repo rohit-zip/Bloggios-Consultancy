@@ -5,10 +5,6 @@
     flex-direction: column;
 }
 
-::selection {
-    user-select: none;
-}
-
 div.left-pane>span,
 div.right-pane>span {
     font-size: calc(0.25vw + 0.25vh + 2vmin);

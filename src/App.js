@@ -1,11 +1,12 @@
 import React from 'react'
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import Landing from './Screen/Landing'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Landing from './Screen/HomeScreen'
+import HomeScreen from './Screen/HomeScreen';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Landing />,
+    element: <HomeScreen />,
     // children: [
     //   {
     //     path: "landing",

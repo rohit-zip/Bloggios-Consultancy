@@ -10,6 +10,7 @@ div.navbar-main-div {
     display: flex;
     flex-direction: row;
     align-items: center;
+    user-select: none;
 }
 
 /* Logo */
