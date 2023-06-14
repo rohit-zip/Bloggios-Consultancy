@@ -1,0 +1,39 @@
+section.home-screen-top-section {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(6.5px);
+    -webkit-backdrop-filter: blur(6.5px);
+    border-radius: 25px;
+    z-index: 0;
+    padding: 20px 0;
+}
+
+div.top-section-right-main-div {
+    padding: 0px;
+    line-height: normal;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+div.top-section-right-main-div>span.title,
+div.top-section-right-main-div>span.motto {
+    text-align: center;
+    user-select: none;
+    background: #EBF3FF;
+    background: -webkit-linear-gradient(to right, #EBF3FF 18%, #9DA164 100%);
+    background: -moz-linear-gradient(to right, #EBF3FF 18%, #9DA164 100%);
+    background: linear-gradient(to right, #EBF3FF 18%, #9DA164 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.top-section-right-main-div>span.title {
+    font-size: 10ch;
+    font-weight: 700;
+}
+
+div.top-section-right-main-div>span.motto {
+    font-size: 4ch;
+    font-weight: 400;
+}
