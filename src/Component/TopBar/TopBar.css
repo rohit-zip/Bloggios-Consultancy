@@ -11,6 +11,7 @@ div.navbar-main-div {
     flex-direction: row;
     align-items: center;
     user-select: none;
+    z-index: 1;
 }
 
 /* Logo */
