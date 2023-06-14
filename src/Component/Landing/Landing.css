@@ -4,16 +4,15 @@
 }
 
 body {
-    background-image: url(../Asset/Svg/sun-tornado.svg);
+    background-image: url(../../Asset/Svg/sun-tornado.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    user-select: contain;
 }
 
 
 
-@media only screen and (max-width: 775px) {
+@media only screen and (max-width: 767px) {
     * {
         padding: 0;
         margin: 0;
