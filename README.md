@@ -4,5 +4,5 @@
 
 
 <div align="center">
-  <h2>Releasing Soon</h2>
+  <h2>Releasing Soon (In Progress)</h2>
 </div>
