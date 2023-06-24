@@ -1,7 +1,6 @@
 import React from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Landing from './Screen/HomeScreen'
-import HomeScreen from './Screen/HomeScreen';
+import HomeScreen from './HomeScreen/HomeScreen'
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
@@ -13,10 +12,6 @@ const router = createBrowserRouter([
     //     element: <Landing />,
     //   },
     // ]
-  },
-  {
-    path: "/landing",
-    element: <Landing />
   }
 ]);
 
