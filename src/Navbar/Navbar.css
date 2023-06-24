@@ -4,13 +4,13 @@ nav.navbar-main {
     min-height: 8vh;
     margin: 0;
     padding: 0;
-    border: 2px solid #616161;
     padding: 20px 10vw;
     max-height: auto;
     font-size: inherit;
     font-family: 'Inter', sans-serif;
     display: block;
     position: relative;
+    transition: padding 100ms ease-in-out
 }
 
 div.navbar-div {
@@ -32,6 +32,23 @@ div.navbar-icon-div {
     display: flex;
     flex-direction: row;
     min-width: fit-content;
+    cursor: pointer;
+}
+
+div.navbar-icon-div::after {
+    content: " ";
+    top: -5%;
+    left: -5%;
+    position: absolute;
+    height: 110%;
+    width: 110%;
+    z-index: -1;
+    transition: all 250ms ease-in-out;
+}
+
+div.navbar-icon-div:hover::after {
+    background-color: rgba(74, 5, 234, 0.4);
+    filter: blur(40px);
 }
 
 div.navbar-icon-div img {
@@ -39,7 +56,7 @@ div.navbar-icon-div img {
 }
 
 .logo-text {
-    padding-left: 4px;
+    padding-left: 8px;
     font-weight: 700;
 }
 
@@ -72,8 +89,8 @@ div.navbar-items>div>span::after {
     height: 4px;
     bottom: -6px;
     border-radius: 20px;
-    background: linear-gradient(80deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
-    box-shadow: 0 1px 40px 2px rgba(0, 0, 0, 0.8);
+    background: linear-gradient(80deg, rgba(97, 71, 158, 0.8), rgba(75, 16, 214, 0.8));
+    box-shadow: 0 -8px 40px 4px rgba(74, 5, 234, 0.8);
     transform: rotate(-7deg) scale(0);
     transition: all 250ms ease-in-out;
 }
@@ -90,10 +107,101 @@ div.consult-button {
     padding: 10px 20px;
     transition: all 250ms ease-in-out;
     cursor: pointer;
+    position: relative;
     min-width: fit-content;
+}
+
+div.consult-button::before {
+    content: '';
+    height: 90%;
+    width: 2px;
+    background-color: rgba(77, 77, 77, 0.6);
+    left: -25px;
+    position: absolute;
+    top: 5%;
+    display: flex;
+    align-self: center;
+    box-shadow: 1px 0 25px 2px rgba(0, 0, 0, 0.4);
+    cursor: default;
 }
 
 div.consult-button:hover {
     box-shadow: 0 1px 25px 1px rgba(74, 5, 234, 0.5);
     color: rgba(255, 255, 255, 1);
+}
+
+div.navbar-hamburger {
+    display: none;
+}
+
+div.navbar-items-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    nav.navbar-main {
+        padding: 20px 4vw;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    div.navbar-items {
+        display: none;
+    }
+
+    div.navbar-hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 40px;
+        min-height: 40px;
+        box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 4px 6px rgba(0, 0, 0, 0.45);
+        font-size: 25px;
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-style: rigeridge;
+    }
+
+    div.navbar-items-mobile {
+        position: absolute;
+        height: auto;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        padding: 20px 4vw;
+        margin: auto;
+        background-color: rgb(240, 240, 240);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 15px 20px -16px rgba(0, 0, 0, 0.4);
+    }
+
+    div.navbar-items-mobile>div {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+    div.navbar-items-mobile>div>span {
+        cursor: pointer;
+    }
+
+    div.menu-shown {
+        display: flex;
+    }
+
+    nav.bloggios-bg-white-filter {
+        background-color: rgb(240, 240, 240);
+    }
+
+    div.consult-button::before {
+        display: none;
+    }
 }
