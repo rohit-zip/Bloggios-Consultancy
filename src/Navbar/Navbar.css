@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+nav.navbar-main {
+    min-height: 8vh;
+    margin: 0;
+    padding: 0;
+    border: 2px solid #616161;
+    padding: 20px 10vw;
+    max-height: auto;
+    font-size: inherit;
+    font-family: 'Inter', sans-serif;
+    display: block;
+    position: relative;
+}
+
+div.navbar-div {
+    border: 0px solid rgba(0, 0, 0, 1);
+    height: 6vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.8);
+    user-select: none;
+    justify-content: space-between;
+}
+
+div.navbar-icon-div {
+    font-size: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    min-width: fit-content;
+}
+
+div.navbar-icon-div img {
+    height: 34px;
+}
+
+.logo-text {
+    padding-left: 4px;
+    font-weight: 700;
+}
+
+div.navbar-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+}
+
+div.navbar-items>div {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    font-weight: 600;
+}
+
+div.navbar-items>div>span {
+    position: relative;
+    width: max-content;
+    display: flex;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+div.navbar-items>div>span::after {
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 4px;
+    bottom: -6px;
+    border-radius: 20px;
+    background: linear-gradient(80deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+    box-shadow: 0 1px 40px 2px rgba(0, 0, 0, 0.8);
+    transform: rotate(-7deg) scale(0);
+    transition: all 250ms ease-in-out;
+}
+
+div.navbar-items>div>span:hover::after {
+    transform: rotate(-7deg) scale(1);
+}
+
+div.consult-button {
+    background-color: rgb(74, 5, 235);
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 1px 10px 0px rgba(74, 5, 234, 0.5);
+    padding: 10px 20px;
+    transition: all 250ms ease-in-out;
+    cursor: pointer;
+    min-width: fit-content;
+}
+
+div.consult-button:hover {
+    box-shadow: 0 1px 25px 1px rgba(74, 5, 234, 0.5);
+    color: rgba(255, 255, 255, 1);
+}
