@@ -178,6 +178,9 @@ div.navbar-items-mobile {
         justify-content: center;
         align-items: center;
         box-shadow: 0 15px 20px -16px rgba(0, 0, 0, 0.4);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom: inset 1px rgba(0, 0, 0, 0.4) solid;
     }
 
     div.navbar-items-mobile>div {
