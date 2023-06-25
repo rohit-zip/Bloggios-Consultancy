@@ -1,10 +1,11 @@
 import React from 'react'
 import Base from '../Base/Base'
+import HeaderSection from './Components/HeaderSection'
 
 const HomeScreen = () => {
     return (
         <Base>
-            <h1>Rohit Parihar</h1>
+            <HeaderSection />
         </Base>
     )
 }
