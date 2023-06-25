@@ -4,7 +4,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Bloggios-Consultancy",
     element: <HomeScreen />,
     // children: [
     //   {
