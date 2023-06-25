@@ -2,7 +2,7 @@
   "name": "bloggios-learning",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://beingrohit-exe.github.io/Bloggios-Consultancy",
+  "homepage": "https://beingrohit-exe.github.io/Bloggios-Consultancy",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
