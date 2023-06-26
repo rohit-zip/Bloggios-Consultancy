@@ -1,0 +1,11 @@
+<svg fill="#2a62ff" width="256px" height="256px" viewBox="0 0 22.00 22.00"
+    xmlns="http://www.w3.org/2000/svg" id="memory-chart-bar" stroke="#2a62ff"
+    stroke-width="0.00001">
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
+        stroke="#2a62ff"
+        stroke-width="0.22000000000000003"></g>
+    <g id="SVGRepo_iconCarrier">
+        <path d="M2 2H4V18H20V20H2V2M6 16V8H10V16H6M11 16V4H15V16H11M16 16V11H20V16H16Z"></path>
+    </g>
+</svg>
