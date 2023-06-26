@@ -5,7 +5,7 @@ section.header-section {
     display: flex;
     flex-direction: row;
     user-select: none;
-    min-width: 325px;
+    min-width: 280px;
 }
 
 section.header-section>div:first-child {
@@ -50,9 +50,9 @@ div.bloggios-bio {
     margin-top: 10px;
 }
 
-@media only screen and (max-width: 1420px) {
+@media only screen and (max-width: 1428px) {
     section.header-section {
-        padding: 10vh 4vw;
+        padding: 7vh 4vw;
     }
 }
 
@@ -84,6 +84,14 @@ div.bloggios-bio {
     }
 
     div.bloggios-bio {
-        font-size: clamp(12px, 2vw, 18px);
+        font-size: clamp(14px, 2vw, 18px);
+    }
+
+    section.header-section {
+        padding: 4vh 4vw;
+    }
+
+    div.bloggios-bio {
+        width: 100%;
     }
 }
