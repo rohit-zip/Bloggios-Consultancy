@@ -82,13 +82,36 @@ div.right-pane-services button {
     background-color: rgb(56, 56, 56);
     border-radius: 20px;
     color: rgba(255, 255, 255, 0.8);
-    transition: all 250ms ease-in-out;
+    transition: all 150ms ease-in-out;
 }
 
-div.right-pane-services button:hover {
-    background-color: rgb(31, 31, 31);
+div.right-pane-services button:hover,
+button.view-all-button:hover {
+    background-color: #f9f9f9;
+    color: #000;
 }
 
 img.images:nth-child(1) {
     border-radius: 20px;
+}
+
+button.view-all-button {
+    width: 60%;
+    height: 50px;
+    background-color: rgb(56, 56, 56);
+    align-self: center;
+    outline: none;
+    border: 0.4px solid rgb(77, 77, 77);
+    color: #ffff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: 'Inter', sans-serif;
+    border-radius: 25px;
+    text-transform: uppercase;
+    transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
+}
+
+button.view-all-button:active,
+div.right-pane-services button:active {
+    opacity: 0.8;
 }

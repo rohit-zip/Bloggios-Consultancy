@@ -33,6 +33,7 @@ const OurServices = () => {
                             body={value.body} />
                     )
                 })}
+                <button className='view-all-button'>View More</button>
             </div>
         </section>
     )
