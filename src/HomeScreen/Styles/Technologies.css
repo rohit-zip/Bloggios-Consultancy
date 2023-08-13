@@ -1,0 +1,40 @@
+section.technologies-main {
+    height: auto;
+    width: 100%;
+    padding: 20vh 0;
+    display: flex;
+    user-select: none;
+}
+
+div.technologies-container {
+    min-height: 34vh;
+    width: 70%;
+    background-image: url(../../Assets/SVG/large-triangles.svg);
+    border-top-right-radius: 140px;
+    background-attachment: fixed;
+    padding: 40px;
+}
+
+div.technologies-container>span.title {
+    font-family: 'Inter', sans-serif;
+    font-size: 34px;
+    color: #f9f9f9;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: block;
+}
+
+div.technologies-container>span.subtitle {
+    font-family: 'Inter', sans-serif;
+    color: #eaeaead0;
+    font-size: 16px;
+    display: flex;
+    width: 60%;
+    margin-top: 16px;
+}
+
+div.technologies-icons-list {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
