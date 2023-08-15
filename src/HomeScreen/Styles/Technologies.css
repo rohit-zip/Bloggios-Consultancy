@@ -12,10 +12,18 @@ div.technologies-container {
     background-image: url(../../Assets/SVG/large-triangles.svg);
     border-top-right-radius: 140px;
     background-attachment: fixed;
+}
+
+div.technologies-container>div {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    width: 100%;
+    height: auto;
+    border-top-right-radius: 140px;
     padding: 40px;
 }
 
-div.technologies-container>span.title {
+div.technologies-container>div>span.title {
     font-family: 'Inter', sans-serif;
     font-size: 34px;
     color: #f9f9f9;
@@ -24,7 +32,7 @@ div.technologies-container>span.title {
     display: block;
 }
 
-div.technologies-container>span.subtitle {
+div.technologies-container>div>span.subtitle {
     font-family: 'Inter', sans-serif;
     color: #eaeaead0;
     font-size: 16px;

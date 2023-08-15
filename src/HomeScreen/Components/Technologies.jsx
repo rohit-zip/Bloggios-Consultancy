@@ -40,15 +40,17 @@ const Technologies = () => {
     return (
         <section className='technologies-main'>
             <div className='technologies-container'>
-                <span className='title'>Our Technical Expertise</span>
-                <span className='subtitle'>With a deep-rooted technical prowess, we excel in a spectrum of cutting-edge technologies. Our proficiency extends to Spring Boot, React, and Flutter, enabling us to craft seamless and dynamic web and mobile applications.</span>
-                <div className='technologies-icons-list'>
-                    {icon_list.map((value, key) => {
-                        return (
-                            <CustomIcon icon={value.icon} name={value.name} />
-                        )
-                    })}
-                    <ViewAllIcon />
+                <div>
+                    <span className='title'>Our Technical Expertise</span>
+                    <span className='subtitle'>With a deep-rooted technical prowess, we excel in a spectrum of cutting-edge technologies. Our proficiency extends to Spring Boot, React, and Flutter, enabling us to craft seamless and dynamic web and mobile applications.</span>
+                    <div className='technologies-icons-list'>
+                        {icon_list.map((value, key) => {
+                            return (
+                                <CustomIcon icon={value.icon} name={value.name} />
+                            )
+                        })}
+                        <ViewAllIcon />
+                    </div>
                 </div>
             </div>
         </section>
