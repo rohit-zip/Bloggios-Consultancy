@@ -11,11 +11,11 @@ import ViewAllIcon from '../../Component/ViewAllIcon'
 
 const icon_list = [
     {
-        name: 'Java Core',
+        name: 'Java',
         icon: java_icon
     },
     {
-        name: 'Spring Boot',
+        name: 'Spring',
         icon: spring_icon
     },
     {
@@ -43,7 +43,7 @@ const Technologies = () => {
                 <div>
                     <span className='title'>Our Technical Expertise</span>
                     <span className='subtitle'>With a deep-rooted technical prowess, we excel in a spectrum of cutting-edge technologies. Our proficiency extends to Spring Boot, React, and Flutter, enabling us to craft seamless and dynamic web and mobile applications.</span>
-                    <div className='technologies-icons-list'>
+                    <div className='technologies-icons-list row row-cols-lg-4'>
                         {icon_list.map((value, key) => {
                             return (
                                 <CustomIcon icon={value.icon} name={value.name} />

@@ -45,4 +45,49 @@ div.technologies-icons-list {
     display: flex;
     flex-direction: row;
     gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1668px) {
+    div.technologies-container {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1215px) {
+    div.technologies-container {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    div.technologies-container>div>span.subtitle {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    div.technologies-container>div>span.title {
+        font-size: 28px;
+    }
+
+    div.technologies-container>div>span.subtitle {
+        width: 100%;
+    }
+
+    div.technologies-container {
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    div.technologies-container>div>span.title {
+        font-size: 25px;
+    }
+
+    div.technologies-container>div>span.subtitle {
+        font-size: 12px;
+    }
 }

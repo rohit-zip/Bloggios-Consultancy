@@ -7,6 +7,8 @@ div.parent-div {
     width: 110px;
     gap: 16px;
     margin-top: 50px;
+    min-width: 110px;
+    min-height: 110px;
 }
 
 div.custom-icon-main-div {
@@ -41,4 +43,35 @@ span.icon-name {
     font-size: 16px;
     color: #eaeaead0;
     transition: all 150ms ease-in-out;
+}
+
+@media only screen and (max-width: 1440px) {
+    div.parent-div {
+        height: 90px;
+        width: 90px;
+    }
+
+    div.custom-icon-main-div {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    div.parent-div {
+        height: 70px;
+        width: 70px;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    div.parent-div {
+        height: 110px;
+        width: 110px;
+    }
+
+    div.custom-icon-main-div {
+        height: 100px;
+        width: 100px;
+    }
 }
