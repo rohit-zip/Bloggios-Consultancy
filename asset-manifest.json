@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/Bloggios-Consultancy/static/css/main.1d43a7d4.css",
-    "main.js": "/Bloggios-Consultancy/static/js/main.c3101527.js",
+    "main.css": "/Bloggios-Consultancy/static/css/main.c0932441.css",
+    "main.js": "/Bloggios-Consultancy/static/js/main.0511c744.js",
     "static/js/787.b7767f7d.chunk.js": "/Bloggios-Consultancy/static/js/787.b7767f7d.chunk.js",
     "static/media/mobile-bloggios.svg": "/Bloggios-Consultancy/static/media/mobile-bloggios.79064f06b4f9f15f3323339dbf5dca6c.svg",
     "static/media/programming.svg": "/Bloggios-Consultancy/static/media/programming.452d7c0634475bf67a13.svg",
     "static/media/web-design.svg": "/Bloggios-Consultancy/static/media/web-design.238c412fd01436473a588a1681222ada.svg",
     "static/media/docker-svgrepo-com.svg": "/Bloggios-Consultancy/static/media/docker-svgrepo-com.a8a64a37b5f0c33aa3e3f4c0007d934a.svg",
     "static/media/background.svg": "/Bloggios-Consultancy/static/media/background.c3cc2901f62c11071552.svg",
+    "static/media/headset-svgrepo-com.svg": "/Bloggios-Consultancy/static/media/headset-svgrepo-com.6a9e56cfe00ca61a62be4303f1dc0e6b.svg",
     "static/media/large-triangles.svg": "/Bloggios-Consultancy/static/media/large-triangles.9a1ec8cf3efea27ee3ed.svg",
     "static/media/react-svgrepo-com.svg": "/Bloggios-Consultancy/static/media/react-svgrepo-com.22a05374f4eefdd120b71df3f98d68a1.svg",
+    "static/media/chat-svgrepo-com.svg": "/Bloggios-Consultancy/static/media/chat-svgrepo-com.fe7bd3d76df934fa3b930e29d5a31eb4.svg",
     "static/media/best-choice.svg": "/Bloggios-Consultancy/static/media/best-choice.51ce891ee57108abea71.svg",
     "static/media/java-svgrepo-com.svg": "/Bloggios-Consultancy/static/media/java-svgrepo-com.fbc981cdbb414e98cd7ca27169723e18.svg",
     "static/media/gear.svg": "/Bloggios-Consultancy/static/media/gear.d604a7ef40271f0093a6907ffaa2961a.svg",
@@ -20,12 +22,12 @@
     "static/media/spring-boot-svgrepo-com.svg": "/Bloggios-Consultancy/static/media/spring-boot-svgrepo-com.14411c3019693ac661a1d62b82e5426d.svg",
     "index.html": "/Bloggios-Consultancy/index.html",
     "static/media/graph.svg": "/Bloggios-Consultancy/static/media/graph.4ded7c0639f436037bc266297e955efe.svg",
-    "main.1d43a7d4.css.map": "/Bloggios-Consultancy/static/css/main.1d43a7d4.css.map",
-    "main.c3101527.js.map": "/Bloggios-Consultancy/static/js/main.c3101527.js.map",
+    "main.c0932441.css.map": "/Bloggios-Consultancy/static/css/main.c0932441.css.map",
+    "main.0511c744.js.map": "/Bloggios-Consultancy/static/js/main.0511c744.js.map",
     "787.b7767f7d.chunk.js.map": "/Bloggios-Consultancy/static/js/787.b7767f7d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d43a7d4.css",
-    "static/js/main.c3101527.js"
+    "static/css/main.c0932441.css",
+    "static/js/main.0511c744.js"
   ]
 }
