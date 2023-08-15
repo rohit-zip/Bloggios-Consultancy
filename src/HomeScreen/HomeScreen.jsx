@@ -4,6 +4,8 @@ import HeaderSection from './Components/HeaderSection'
 import BestChoice from './Components/BestChoice'
 import OurServices from './Components/OurServices'
 import Technologies from './Components/Technologies'
+import Booking from './Components/Booking'
+import Footer from './Components/Footer'
 
 const HomeScreen = () => {
     return (
@@ -12,6 +14,8 @@ const HomeScreen = () => {
             <BestChoice />
             <OurServices />
             <Technologies />
+            <Booking />
+            <Footer />
         </Base>
     )
 }
