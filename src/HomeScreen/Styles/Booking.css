@@ -22,7 +22,6 @@ div.booking-card-div {
     flex-direction: row;
     position: absolute;
     bottom: -200px;
-    right: 150px;
     gap: 40px;
 }
 
@@ -34,4 +33,96 @@ span.motto-brief {
     margin-top: 20px;
     line-height: 34px;
     font-family: 'Inter', sans-serif;
+}
+
+@media only screen and (max-width: 2000px) {
+    div.booking-card-div {
+        right: 150px;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    section.booking-section {
+        height: 70vh;
+    }
+}
+
+@media only screen and (max-width: 1270px) {
+    section.booking-section {
+        height: 60vh;
+    }
+
+    section.booking-section div.motto-heading {
+        font-size: 60px;
+    }
+
+    span.motto-brief {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    section.booking-section {
+        height: 60vh;
+    }
+
+    section.booking-section div.motto-heading {
+        font-size: 50px;
+    }
+
+    span.motto-brief {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    div.booking-card-div {
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        top: 50px;
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 795px) {
+    section.booking-section div.motto-heading {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    div.booking-card-div {
+        flex-direction: column;
+        position: relative;
+    }
+
+    section.booking-section {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    section.booking-section div.motto-heading {
+        font-size: 30px;
+    }
+
+    span.motto-brief {
+        width: 100%;
+        font-size: 14px;
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    section.booking-section div.motto-heading {
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    span.motto-brief {
+        width: 100%;
+        font-size: 12px;
+        text-align: justify;
+        line-height: 25px;
+    }
 }
