@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Bloggios-Consultancy/static/css/main.1b1a7974.css",
-    "main.js": "/Bloggios-Consultancy/static/js/main.a3543ab8.js",
+    "main.css": "/Bloggios-Consultancy/static/css/main.1d43a7d4.css",
+    "main.js": "/Bloggios-Consultancy/static/js/main.c3101527.js",
     "static/js/787.b7767f7d.chunk.js": "/Bloggios-Consultancy/static/js/787.b7767f7d.chunk.js",
     "static/media/mobile-bloggios.svg": "/Bloggios-Consultancy/static/media/mobile-bloggios.79064f06b4f9f15f3323339dbf5dca6c.svg",
     "static/media/programming.svg": "/Bloggios-Consultancy/static/media/programming.452d7c0634475bf67a13.svg",
@@ -20,12 +20,12 @@
     "static/media/spring-boot-svgrepo-com.svg": "/Bloggios-Consultancy/static/media/spring-boot-svgrepo-com.14411c3019693ac661a1d62b82e5426d.svg",
     "index.html": "/Bloggios-Consultancy/index.html",
     "static/media/graph.svg": "/Bloggios-Consultancy/static/media/graph.4ded7c0639f436037bc266297e955efe.svg",
-    "main.1b1a7974.css.map": "/Bloggios-Consultancy/static/css/main.1b1a7974.css.map",
-    "main.a3543ab8.js.map": "/Bloggios-Consultancy/static/js/main.a3543ab8.js.map",
+    "main.1d43a7d4.css.map": "/Bloggios-Consultancy/static/css/main.1d43a7d4.css.map",
+    "main.c3101527.js.map": "/Bloggios-Consultancy/static/js/main.c3101527.js.map",
     "787.b7767f7d.chunk.js.map": "/Bloggios-Consultancy/static/js/787.b7767f7d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b1a7974.css",
-    "static/js/main.a3543ab8.js"
+    "static/css/main.1d43a7d4.css",
+    "static/js/main.c3101527.js"
   ]
 }
