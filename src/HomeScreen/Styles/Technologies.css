@@ -80,6 +80,11 @@ div.technologies-icons-list {
         border-top-right-radius: 40px;
         border-bottom-right-radius: 40px;
     }
+
+    div.technologies-container>div {
+        border-top-right-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
 }
 
 @media only screen and (max-width:500px) {
