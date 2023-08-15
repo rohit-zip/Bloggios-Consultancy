@@ -115,3 +115,109 @@ button.view-all-button:active,
 div.right-pane-services button:active {
     opacity: 0.8;
 }
+
+@media only screen and (max-width: 1488px) {
+    div.right-pane-services button {
+        font-size: 14px;
+        padding: 7px 20px;
+        letter-spacing: 1px;
+    }
+
+    div.right-pane-services>div>div {
+        font-size: 22px;
+    }
+
+    div.right-pane-services>div>span {
+        font-size: 12px;
+        font-weight: 100;
+        text-align: justify;
+        color: rgba(255, 255, 255, 0.8);
+    }
+}
+
+@media only screen and (max-width: 1260px) {
+    .list-row>div:last-child {
+        padding: 0px 0px;
+        justify-content: space-around;
+    }
+
+    div.our-services-container>span {
+        font-size: 40px;
+        line-height: 60px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .our-services-container .list-row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .list-row>div:first-child {
+        width: 65%;
+    }
+
+    .list-row>div:last-child {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+    }
+
+    div.right-pane-services button {
+        width: 100%;
+        height: 10%;
+        margin-top: 10px;
+    }
+
+    section.our-services>div.our-services-container {
+        padding: 40px 4vw;
+        gap: 70px;
+    }
+
+    button.view-all-button {
+        width: 85%;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    div.our-services-container>span {
+        font-size: 30px;
+        line-height: 44px;
+    }
+
+    section.our-services>div.our-services-container {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    section.our-services>div.our-services-container {
+        width: 95%;
+        padding: 40px 2vw;
+    }
+
+    div.our-services-container>span {
+        font-size: 25px;
+        line-height: 44px;
+    }
+
+    button.view-all-button {
+        width: 85%;
+        height: 34px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 338px) {
+    div.our-services-container>span {
+        font-size: 20px;
+        line-height: 34px;
+    }
+}
