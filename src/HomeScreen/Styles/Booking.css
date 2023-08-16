@@ -126,3 +126,34 @@ span.motto-brief {
         line-height: 25px;
     }
 }
+
+@media only screen and (max-height: 842px) {
+    section.booking-section {
+        height: 70vh;
+    }
+}
+
+@media only screen and (max-height: 717px) {
+    section.booking-section {
+        height: 80vh;
+    }
+}
+
+@media only screen and (max-height: 628px) {
+    section.booking-section {
+        height: 90vh;
+    }
+}
+
+@media only screen and (max-height: 558px) {
+    section.booking-section {
+        height: 110vh;
+    }
+}
+
+@media only screen and (max-height: 558px) {
+    section.booking-section {
+        height: 110vh;
+        min-height: 500px;
+    }
+}
