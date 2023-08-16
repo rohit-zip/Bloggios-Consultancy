@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.bf363882.css",
+    "main.css": "/static/css/main.90c1160b.css",
     "main.js": "/static/js/main.c9c626f1.js",
     "static/js/787.b7767f7d.chunk.js": "/static/js/787.b7767f7d.chunk.js",
     "static/media/mobile-bloggios.svg": "/static/media/mobile-bloggios.79064f06b4f9f15f3323339dbf5dca6c.svg",
@@ -22,12 +22,12 @@
     "static/media/spring-boot-svgrepo-com.svg": "/static/media/spring-boot-svgrepo-com.14411c3019693ac661a1d62b82e5426d.svg",
     "index.html": "/index.html",
     "static/media/graph.svg": "/static/media/graph.4ded7c0639f436037bc266297e955efe.svg",
-    "main.bf363882.css.map": "/static/css/main.bf363882.css.map",
+    "main.90c1160b.css.map": "/static/css/main.90c1160b.css.map",
     "main.c9c626f1.js.map": "/static/js/main.c9c626f1.js.map",
     "787.b7767f7d.chunk.js.map": "/static/js/787.b7767f7d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf363882.css",
+    "static/css/main.90c1160b.css",
     "static/js/main.c9c626f1.js"
   ]
 }
