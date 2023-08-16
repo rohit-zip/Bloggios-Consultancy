@@ -8,6 +8,7 @@ section.booking-section {
     position: relative;
     display: flex;
     flex-direction: column;
+    user-select: none;
 }
 
 section.booking-section div.motto-heading {
