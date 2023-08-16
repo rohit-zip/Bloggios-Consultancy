@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <section className='bloggios-landing-footer'>
             <div className='landing-footer-div d-flex'>
-                <div className="col-5">
+                <div className="col-lg-5 com-md-4 col-sm-12">
                     <span>Find Us</span>
                     <div className='footer-icons-div'>
                         <i class="fa-brands fa-instagram"></i>
@@ -15,7 +15,7 @@ const Footer = () => {
                         <i class="fa-brands fa-linkedin"></i>
                     </div>
                 </div>
-                <div className="col-7 d-flex footer-services-section">
+                <div className="col-lg-7 col-md-12 col-sm-12 d-flex footer-services-section">
                     <div className="col">
                         <span>Dev Service</span>
                         <div>

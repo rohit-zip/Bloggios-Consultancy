@@ -39,10 +39,6 @@ div.footer-icons-div i:hover {
     transform: scale(1);
 }
 
-div.landing-footer-div>div:nth-child(2) {
-    height: 30vh;
-}
-
 div.footer-services-section>div.col>span {
     font-family: 'Inter', sans-serif;
     font-size: 25px;
@@ -88,4 +84,53 @@ div.footer-last-section div:last-child {
 
 div.footer-last-section div:first-child span {
     cursor: pointer;
+}
+
+@media only screen and (max-width: 998px) {
+    div.landing-footer-div {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div.footer-services-section div.col {
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+    }
+
+    div.footer-last-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 725px) {
+    div.landing-footer-div {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: start;
+    }
+}
+
+@media only screen and (max-width:670px) {
+    section.bloggios-landing-footer {
+        padding-top: 70px;
+    }
+
+    div.footer-services-section div:first-child {
+        display: none;
+    }
+
+    div.footer-services-section {
+        gap: 40px;
+    }
+}
+
+@media only screen and (max-width:352px) {
+    div.footer-services-section {
+        flex-direction: column;
+    }
 }
