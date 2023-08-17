@@ -1,8 +1,12 @@
 import React from 'react'
+import Base from '../../Base/Base'
+import Signup from './Component/Signup'
 
 const SignupScreen = () => {
   return (
-    <div>SignupScreen</div>
+    <Base>
+      <Signup />
+    </Base>
   )
 }
 
