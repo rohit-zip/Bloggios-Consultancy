@@ -1,23 +1,16 @@
 import React from 'react'
 import HomeScreen from './HomeScreen/HomeScreen'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <HomeScreen />,
-    // children: [
-    //   {
-    //     path: "landing",
-    //     element: <Landing />,
-    //   },
-    // ]
-  }
-]);
+import { BrowserRouter, Route, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
+import SignupScreen from './Authentication/SignUp/SignupScreen';
 
 const App = () => {
   return (
-    <RouterProvider router={router} />
+    <BrowserRouter basename='/'>
+      <Routes>
+        <Route path='/' element={<HomeScreen />} />
+        <Route path='/signup' element={<SignupScreen />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 body {
-    background: url(../Assets/SVG/background.svg);
-    background-size: cover;
+    background: linear-gradient(to bottom right, rgb(159, 154, 207), rgb(70, 121, 162));
     font-family: 'Inter', sans-serif;
 }
 

@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import bloggios_logo from '../Assets/SVG/bloggios-logo.svg'
+import { useNavigate } from 'react-router-dom';
+import SignupScreen from '../Authentication/SignUp/SignupScreen';
 
 const Navbar = () => {
 
     const [isShown, setIsShown] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <nav className={`navbar-main ${isShown ? 'bloggios-bg-white-filter' : ''}`}>
@@ -17,7 +20,7 @@ const Navbar = () => {
                     <div>
                         <span>Services</span>
                         <span>About</span>
-                        <span>Contact</span>
+                        <span onClick={() => navigate('/signup')}>Signup</span>
                     </div>
                     <div className='consult-button'>
                         Get a Quote
@@ -30,7 +33,7 @@ const Navbar = () => {
                     <div>
                         <span>Services</span>
                         <span>About</span>
-                        <span>Contact</span>
+                        <span >Sign Up</span>
                     </div>
                     <div className='consult-button'>
                         Get a Quote
