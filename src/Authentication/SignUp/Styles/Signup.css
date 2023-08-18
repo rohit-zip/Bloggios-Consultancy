@@ -49,6 +49,10 @@ div.signup-logo-div {
     gap: 10px;
 }
 
+div.signup-logo-div>img {
+    height: 70px;
+}
+
 div.signup-logo-div>span {
     font-family: 'Inter', sans-serif;
     color: #f5f5f5;
@@ -124,5 +128,43 @@ button.social-signup-button {
 
     div.auth-signup-main-div {
         margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    div.auth-signup-main-div>div:last-child {
+        display: none;
+    }
+
+    div.auth-signup-main-div {
+        width: 500px;
+    }
+
+    div.auth-signup-main-div>div:first-child {
+        border-radius: 25px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    div.auth-signup-main-div {
+        height: auto;
+    }
+
+    div.auth-signup-main-div {
+        width: 95%;
+    }
+
+    div.signup-logo-div>img {
+        height: 50px;
+    }
+
+    div.signup-logo-div>span {
+        font-size: 16px;
+    }
+
+    div.signup-greeting-div {
+        margin-top: 10px;
+        font-size: 28px;
     }
 }
