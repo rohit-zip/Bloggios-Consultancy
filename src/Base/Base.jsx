@@ -4,12 +4,12 @@ import './Base.css'
 
 const Base = ({ children }) => {
     return (
-            <div className='homescreen-backdrop'>
-                <Navbar />
-                <div>
-                    {children}
-                </div>
+        <div className='homescreen-backdrop'>
+            <Navbar />
+            <div>
+                {children}
             </div>
+        </div>
     )
 }
 
