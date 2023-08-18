@@ -33,7 +33,7 @@ const Navbar = () => {
                     <div>
                         <span>Services</span>
                         <span>About</span>
-                        <span >Sign Up</span>
+                        <span onClick={() => navigate('/signup')}>Sign Up</span>
                     </div>
                     <div className='consult-button'>
                         Get a Quote
