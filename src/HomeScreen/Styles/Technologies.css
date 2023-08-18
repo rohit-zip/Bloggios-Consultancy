@@ -11,7 +11,6 @@ div.technologies-container {
     width: 70%;
     background-image: url(../../Assets/SVG/large-triangles.svg);
     border-top-right-radius: 140px;
-    background-attachment: fixed;
 }
 
 div.technologies-container>div {
@@ -88,6 +87,7 @@ div.technologies-icons-list {
 }
 
 @media only screen and (max-width:500px) {
+
     div.technologies-container>div>span.title {
         font-size: 25px;
     }
