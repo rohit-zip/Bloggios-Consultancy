@@ -21,7 +21,7 @@ const Signup = () => {
             <div className='auth-signup-main-div'>
                 <div className="col">
                     <div className='signup-logo-div'>
-                        <img src={bloggios_logo} alt="Bloggios" height={'70px'} />
+                        <img src={bloggios_logo} alt="Bloggios" />
                         <span>BLOGGIOS</span>
                     </div>
                     <div className='signup-greeting-div'>
