@@ -46,7 +46,7 @@ const Technologies = () => {
                     <div className='technologies-icons-list row row-cols-lg-4'>
                         {icon_list.map((value, key) => {
                             return (
-                                <CustomIcon icon={value.icon} name={value.name} />
+                                <CustomIcon key={key} icon={value.icon} name={value.name} />
                             )
                         })}
                         <ViewAllIcon />

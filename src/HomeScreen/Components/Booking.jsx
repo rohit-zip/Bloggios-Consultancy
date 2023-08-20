@@ -26,6 +26,7 @@ const Booking = () => {
                 {cardList.map((value, key) => {
                     return (
                         <BookingCard
+                            key={key}
                             title={value.title}
                             source={value.source}
                             subTitle={value.subTitle} />

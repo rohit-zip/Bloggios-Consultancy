@@ -27,6 +27,7 @@ const OurServices = () => {
                 {listData.map((value, key) => {
                     return (
                         <ListRow
+                            key={key}
                             image={value.image}
                             title={value.title}
                             alt={value.alt}
