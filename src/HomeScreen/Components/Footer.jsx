@@ -9,10 +9,10 @@ const Footer = () => {
                 <div className="col-lg-5 com-md-4 col-sm-12">
                     <span>Find Us</span>
                     <div className='footer-icons-div'>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-square-twitter"></i>
-                        <i class="fa-brands fa-linkedin"></i>
+                        <i className="fa-brands fa-instagram"></i>
+                        <i className="fa-brands fa-facebook"></i>
+                        <i className="fa-brands fa-square-twitter"></i>
+                        <i className="fa-brands fa-linkedin"></i>
                     </div>
                 </div>
                 <div className="col-lg-7 col-md-12 col-sm-12 d-flex footer-services-section">

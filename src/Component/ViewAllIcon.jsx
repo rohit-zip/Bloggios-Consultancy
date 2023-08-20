@@ -4,7 +4,7 @@ import './ViewAllIcon.css'
 const ViewAllIcon = () => {
     return (
         <div className='bloggios-view-all-div'>
-            <i class="fa-solid fa-arrow-right"></i>
+            <i className="fa-solid fa-arrow-right"></i>
         </div>
     )
 }
