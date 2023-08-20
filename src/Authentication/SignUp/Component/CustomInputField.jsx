@@ -5,7 +5,11 @@ const CustomInputField = (props) => {
     return (
         <div className='input-field-custom'>
             <span>{props.label}</span>
-            <input type="text" placeholder={props.placeholder} />
+            <input 
+                type={props.type}
+                onChange={props.onChange}
+                value={props.value}
+                placeholder={props.placeholder} />
         </div>
     )
 }
