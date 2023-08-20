@@ -1,21 +1,57 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../Styles/Signup.css'
 import coding_image from '../../../Assets/SVG/undraw_sharing_knowledge_03vp.svg'
 import bloggios_logo from '../../../Assets/SVG/bloggios-white-purple-logo.svg'
 import CustomInputField from './CustomInputField'
+import { signUp } from '../../../Services/RestServices/UserServiceApi'
 
 const inputList = [
     {
         label: 'Email',
-        placeholder: 'Enter your Email'
+        placeholder: 'Enter your Email',
+        type: 'text',
+        constraint: 'email'
     },
     {
         label: 'Password',
-        placeholder: 'Enter your password'
+        placeholder: 'Enter your password',
+        type: 'password',
+        constraint: 'password'
     }
 ]
 
 const Signup = () => {
+
+    const [data, setData] = useState(
+        {
+            email: '',
+            password: ''
+        }
+    )
+
+    useEffect(() => {
+        console.log(data);
+    }, [data])
+
+    const handleChange = (event, property) => {
+        setData({
+            ...data,
+            [property]: event.target.value
+        })
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        signUp(data)
+            .then((response) => {
+                console.log(response);
+                setData({
+                    email: '',
+                    password: ''
+                })
+            }).catch((error) => console.log(error))
+    }
+
     return (
         <section className='auth-bloggios-signup'>
             <div className='auth-signup-main-div'>
@@ -30,11 +66,17 @@ const Signup = () => {
                     <div className='input-fields-signup'>
                         {inputList.map((value, key) => {
                             return (
-                                <CustomInputField label={value.label} placeholder={value.placeholder} />
+                                <CustomInputField
+                                    key={key}
+                                    label={value.label}
+                                    type={value.type}
+                                    onChange={(e) => handleChange(e, value.constraint)}
+                                    value={value.constraint === 'email' ? data.email : data.password}
+                                    placeholder={value.placeholder} />
                             )
                         })}
                     </div>
-                    <button className='signup-button'>Sign Up</button>
+                    <button className='signup-button' onClick={(event) => handleSubmit(event)}>Sign Up</button>
                     <div className='bloggios-divider'>
                         <div className='pre-or'></div>
                         <span>or</span>
