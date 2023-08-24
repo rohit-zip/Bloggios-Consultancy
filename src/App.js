@@ -1,6 +1,6 @@
 import React from 'react'
 import HomeScreen from './HomeScreen/HomeScreen'
-import { BrowserRouter, Route, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import SignupScreen from './Authentication/SignUp/SignupScreen';
 
 const App = () => {

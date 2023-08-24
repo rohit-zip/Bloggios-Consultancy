@@ -4,9 +4,6 @@ import coding_image from '../../../Assets/SVG/undraw_sharing_knowledge_03vp.svg'
 import bloggios_logo from '../../../Assets/SVG/bloggios-white-purple-logo.svg'
 import CustomInputField from './CustomInputField'
 import { signUp } from '../../../Services/RestServices/UserServiceApi'
-import { isVisible } from '@testing-library/user-event/dist/utils'
-import { toast } from 'react-toastify'
-import { Toast, ToastContainer } from 'react-bootstrap'
 import { Alert, Collapse, IconButton } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from 'react-router-dom'
@@ -44,7 +41,7 @@ const Signup = () => {
         setTimeout(() => {
             if (restSuccess) {
                 setRestSuccess(false);
-                navigate('/')
+                navigate('/');
             }
         }, 1000);
     }, [restSuccess])

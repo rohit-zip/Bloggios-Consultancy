@@ -2,7 +2,7 @@ div.parent-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     height: 110px;
     width: 110px;
     gap: 16px;

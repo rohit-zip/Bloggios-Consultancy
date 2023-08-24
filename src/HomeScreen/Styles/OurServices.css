@@ -165,7 +165,7 @@ div.right-pane-services button:active {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: end;
+        align-items: flex-end;
     }
 
     div.right-pane-services button {

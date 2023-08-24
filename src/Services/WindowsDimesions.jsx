@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from 'react';
+import {useLayoutEffect, useState} from 'react';
 
 function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
