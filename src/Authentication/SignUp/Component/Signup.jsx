@@ -20,6 +20,7 @@ const Signup = () => {
     const [restSuccess, setRestSuccess] = useState(false);
     const [errorData, setErrorData] = useState("");
     const [successData, setSuccessData] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
 
     const navigate = useNavigate();
 
@@ -57,11 +58,13 @@ const Signup = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        setIsLoading(true);
         signUp(data)
             .then((response) => {
                 console.log(response);
                 setRestError(false);
                 setRestSuccess(true);
+                setIsLoading(false);
                 setSuccessData(response.message);
                 setData({
                     email: '',
@@ -71,6 +74,7 @@ const Signup = () => {
             .catch((error) => {
                 console.log(error?.response?.data?.message);
                 setErrorData(error?.response?.data?.message);
+                setIsLoading(false);
                 setRestError(true);
                 setRestSuccess(false);
             })
@@ -104,6 +108,15 @@ const Signup = () => {
 
     return (
         <>
+            <div style={{
+                position: 'absolute',
+                height: '100%',
+                width: '100%',
+                display: isLoading ? 'flex' : 'none',
+                backgroundColor: isLoading ? 'rgba(0, 0, 0, 0.4)' : 'transparent',
+                filter: 'blur(80px)',
+                webkitFilter: 'blur(80px)'
+            }}></div>
             <div style={{
                 position: 'absolute', right: '20px', top: '100px'
             }}>
@@ -174,7 +187,7 @@ const Signup = () => {
                 </IconButton>}
                 sx={{ mb: 2 }}
             >
-                {errorData.length > 0 ? errorData : 'Something went wrong at Server Side'}
+                {errorData ? errorData : 'Something went wrong at Server Side'}
             </Alert>
         </Collapse>
     }
