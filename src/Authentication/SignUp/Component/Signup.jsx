@@ -174,7 +174,7 @@ const Signup = () => {
                 </IconButton>}
                 sx={{ mb: 2 }}
             >
-                {errorData}
+                {errorData.length > 0 ? errorData : 'Something went wrong at Server Side'}
             </Alert>
         </Collapse>
     }
