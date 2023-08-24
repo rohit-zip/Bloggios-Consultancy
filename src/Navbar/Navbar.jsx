@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import './Navbar.css'
 import bloggios_logo from '../Assets/SVG/bloggios-logo.svg'
-import { useNavigate } from 'react-router-dom';
-import SignupScreen from '../Authentication/SignUp/SignupScreen';
+import {useNavigate} from 'react-router-dom';
 
 const Navbar = () => {
 

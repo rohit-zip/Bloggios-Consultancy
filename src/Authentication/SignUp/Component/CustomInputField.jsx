@@ -1,15 +1,7 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import '../Styles/CustomInputField.css'
 
 const CustomInputField = (props) => {
-
-    const [isVisible, setIsVisible] = useState(false);
-    const [isFocus, setIsFocus] = useState(false);
-    const textInputRef = useRef(null);
-
-    const handleClick = () => {
-        setIsFocus(true);
-    }
 
     return (
         <div className='input-field-custom'>
@@ -22,8 +14,6 @@ const CustomInputField = (props) => {
                     type={props.type}
                     onChange={props.onChange}
                     value={props.value}
-                    ref={textInputRef}
-                    onClick={() => handleClick()}
                     onKeyUp={props.onKeyUp}
                     placeholder={props.placeholder} />
                 {

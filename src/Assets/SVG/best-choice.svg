@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:svgjs="http://svgjs.dev/svgjs" width="1200" height="800" preserveAspectRatio="none"
-    viewBox="0 0 1200 800">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+     width="1200" height="800" preserveAspectRatio="none"
+     viewBox="0 0 1200 800">
     <g mask="url(&quot;#SvgjsMask2071&quot;)" fill="none">
         <rect width="1200" height="800" x="0" y="0" fill="url(&quot;#SvgjsLinearGradient2072&quot;)"></rect>
         <path
