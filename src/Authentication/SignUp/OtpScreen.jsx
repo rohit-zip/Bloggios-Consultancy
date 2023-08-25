@@ -4,6 +4,9 @@ import './Styles/OtpScreen.css'
 import bloggios_logo from '../../Assets/SVG/bloggios-white-purple-logo.svg'
 import OtpComponent from './Component/OtpComponent'
 import { useLocation, useNavigate } from 'react-router-dom'
+import { resendOtp, verifyOtp } from '../../Services/RestServices/UserServiceApi'
+import { Alert, Collapse, IconButton } from '@mui/material'
+import CloseIcon from '@mui/icons-material/Close';
 
 const OtpScreen = () => {
 
@@ -11,9 +14,10 @@ const OtpScreen = () => {
     const location = useLocation();
 
     const userEmail = location.state?.userEmail ? location.state.userEmail : "";
+    const userId = location.state?.userId ? location.state.userId : "";
 
     useEffect(() => {
-        if (userEmail === "") {
+        if (userEmail === "" && userId === "") {
             navigate("/signup");
         }
     })
@@ -57,7 +61,21 @@ const OtpScreen = () => {
         }
     }, 1000);
 
+    const [restError, setRestError] = useState(false);
+    const [errorData, setErrorData] = useState("");
+    const [restSuccess, setRestSuccess] = useState(false);
+    const [successData, setSuccessData] = useState("");
+
     const disableButton = () => {
+        resendOtp(userId)
+            .then((response) => {
+                setRestError(false);
+                setRestSuccess(true);
+                setSuccessData(response.message);
+            }).catch((error) => {
+                setRestError(true);
+                setErrorData(error?.response?.data?.message);
+            })
         setCounter(25)
         setIsDisabled(true);
         setButtonText("Sent");
@@ -84,14 +102,45 @@ const OtpScreen = () => {
             [inputId]: value,
         }));
     };
-    //this function processes form submission
+
     const handleSubmit = () => {
-        const finalOtp = inputValues.input1 + "" + inputValues.input2 + "" + inputValues.input3 + "" + inputValues.input4 + "" + inputValues.input5 + "" + inputValues.input6;
-        console.log(finalOtp);
-    };
+        const otpdata = inputValues.input1 + "" + inputValues.input2 + "" + inputValues.input3 + "" + inputValues.input4 + "" + inputValues.input5 + "" + inputValues.input6;
+        const otp = otpdata.toString();
+        verifyOtp(userEmail, otp)
+            .then((response) => {
+                navigate("/")
+            })
+            .catch((error) => {
+                setRestError(true);
+                setErrorData(error?.response?.data?.message);
+            })
+    }
+
+    useEffect(() => {
+        setTimeout(() => {
+            if (restError) {
+                setRestError(false);
+            }
+        }, 4000);
+    }, [restError])
+
+    useEffect(() => {
+        setTimeout(() => {
+            if (restSuccess) {
+                setRestSuccess(false);
+            }
+        }, 4000);
+    }, [restSuccess])
 
     return (
         <Base>
+            <div style={{
+                position: 'absolute', bottom: '40px', left: '50%', transform: 'translateX(-50%)',
+            }}>
+                {
+                    restError ? ErrorToast() : SuccessToast()
+                }
+            </div>
             <section className='bloggios-otp-section'>
                 <div className='otp-main-div'>
                     <header>
@@ -160,6 +209,50 @@ const OtpScreen = () => {
             </section>
         </Base>
     )
+
+    function ErrorToast() {
+        return <Collapse in={restError}>
+            <Alert
+                severity="error"
+                variant='filled'
+                action={<IconButton
+                    aria-label="close"
+                    color="inherit"
+                    size="small"
+                    onClick={() => {
+                        setRestError(false)
+                    }}
+                >
+                    <CloseIcon fontSize="inherit" />
+                </IconButton>}
+                sx={{ mb: 2 }}
+            >
+                {errorData ? errorData : 'Something went wrong at Server Side'}
+            </Alert>
+        </Collapse>
+    }
+
+    function SuccessToast() {
+        return <Collapse in={restSuccess}>
+            <Alert
+                severity="success"
+                variant='filled'
+                action={<IconButton
+                    aria-label="close"
+                    color="inherit"
+                    size="small"
+                    onClick={() => {
+                        setRestSuccess(false)
+                    }}
+                >
+                    <CloseIcon fontSize="inherit" />
+                </IconButton>}
+                sx={{ mb: 2 }}
+            >
+                {successData}
+            </Alert>
+        </Collapse>
+    }
 }
 
 export default OtpScreen
