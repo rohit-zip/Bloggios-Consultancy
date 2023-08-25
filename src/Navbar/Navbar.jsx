@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 import bloggios_logo from '../Assets/SVG/bloggios-logo.svg'
-import {useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
         <nav className={`navbar-main ${isShown ? 'bloggios-bg-white-filter' : ''}`}>
             <div className='navbar-div'>
-                <div className='navbar-icon-div'>
+                <div onClick={() => navigate('/')} className='navbar-icon-div'>
                     <img src={bloggios_logo} alt="B" height='100%' />
                     <div className='logo-text'>Bloggios</div>
                 </div>
