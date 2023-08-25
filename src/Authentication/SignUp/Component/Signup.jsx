@@ -28,6 +28,8 @@ const Signup = () => {
         }
     )
 
+    const [userEmail, setUserEmail] = useState("");
+
     useEffect(() => {
         setTimeout(() => {
             if (restError) {
@@ -41,7 +43,11 @@ const Signup = () => {
         setTimeout(() => {
             if (restSuccess) {
                 setRestSuccess(false);
-                navigate('/');
+                navigate('/otp', {
+                    state: {
+                        userEmail: userEmail
+                    }
+                });
             }
         }, 1000);
     }, [restSuccess])
@@ -59,6 +65,7 @@ const Signup = () => {
         signUp(data)
             .then((response) => {
                 console.log(response);
+                setUserEmail(data.email);
                 setRestError(false);
                 setRestSuccess(true);
                 setIsLoading(false);

@@ -1,0 +1,100 @@
+section.bloggios-otp-section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 70px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+div.otp-main-div {
+    height: auto;
+    width: auto;
+    background-color: #4258ff;
+    border-radius: 25px;
+    box-shadow: 10px 10px 50px 10px #4258ff66;
+    padding: 60px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+div.otp-main-div>span {
+    font-family: 'Inter', sans-serif;
+    color: #f5f5f5;
+    font-size: 25px;
+}
+
+form .otp-input-field {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.otp-input-field input {
+    height: 45px;
+    width: 42px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 1.125rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.otp-input-field input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.otp-input-field input::-webkit-inner-spin-button,
+.otp-input-field input::-webkit-outer-spin-button {
+    display: none;
+}
+
+form button {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 6px;
+    background: #6779ff;
+    transition: all 0.2s ease;
+    border: 1px solid #6779fff2;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    transition: all 250ms ease-in-out;
+}
+
+form button.active {
+    background: #4070f4;
+    pointer-events: auto;
+}
+
+form button.resend-button:hover {
+    background-color: #f5f5f5dc;
+    border: 1px solid #6779fff2;
+    color: #6779ff;
+}
+
+form button.resend-button {
+    cursor: pointer;
+    transition: all 250ms;
+    justify-content: center;
+}
+
+form button.resend-button-disabled {
+    cursor: not-allowed;
+    transition: all 250ms;
+    justify-content: space-between;
+}
+
+form button.resend-button-disabled:hover {
+    background: #6779ff;
+    color: #fff;
+}
