@@ -28,7 +28,10 @@ const Signup = () => {
         }
     )
 
-    const [userEmail, setUserEmail] = useState("");
+    const [userResponseData, setUserResponseData] = useState({
+        email: '',
+        userId: ''
+    });
 
     useEffect(() => {
         setTimeout(() => {
@@ -45,7 +48,8 @@ const Signup = () => {
                 setRestSuccess(false);
                 navigate('/otp', {
                     state: {
-                        userEmail: userEmail
+                        userEmail: userResponseData.email,
+                        userId: userResponseData.userId
                     }
                 });
             }
@@ -65,7 +69,10 @@ const Signup = () => {
         signUp(data)
             .then((response) => {
                 console.log(response);
-                setUserEmail(data.email);
+                setUserResponseData({
+                    email: data.email,
+                    userId: response.userId
+                });
                 setRestError(false);
                 setRestSuccess(true);
                 setIsLoading(false);
