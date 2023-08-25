@@ -6,6 +6,7 @@ import OurServices from './Components/OurServices'
 import Technologies from './Components/Technologies'
 import Booking from './Components/Booking'
 import Footer from './Components/Footer'
+import Testimonials from './Components/Testimonals'
 
 const HomeScreen = () => {
     return (
@@ -14,6 +15,7 @@ const HomeScreen = () => {
             <BestChoice />
             <OurServices />
             <Technologies />
+            <Testimonials />
             <Booking />
             <Footer />
         </Base>
