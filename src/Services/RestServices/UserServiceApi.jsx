@@ -2,13 +2,13 @@ import { restAxios } from './RestService'
 
 export const signUp = (signup) => {
     return restAxios
-        .post('user-service/register', signup)
+        .post('user-service/auth/register', signup)
         .then((response) => response.data);
 }
 
 export const verifyOtp = (email, otp) => {
     return restAxios
-        .post("user-service/otp", null, {
+        .post("user-service/auth/otp", null, {
             headers: {
                 'otp': otp
             },
