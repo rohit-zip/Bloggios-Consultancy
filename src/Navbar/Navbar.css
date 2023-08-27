@@ -16,7 +16,7 @@ nav.navbar-main {
     font-family: 'Inter', sans-serif;
     display: block;
     position: relative;
-    transition: padding 100ms ease-in-out
+    transition: padding 100ms ease-in-out;
 }
 
 div.navbar-div {
@@ -29,7 +29,6 @@ div.navbar-div {
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.8);
     user-select: none;
-
     justify-content: space-between;
 }
 
