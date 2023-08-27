@@ -42,21 +42,6 @@ const LoginComponent = (props) => {
         }, 4000);
     }, [restError])
 
-    useEffect(() => {
-        setRestError(false);
-        setTimeout(() => {
-            if (restSuccess) {
-                setRestSuccess(false);
-                // navigate('/dashboard', {
-                //     state: {
-                //         userEmail: userResponseData.email,
-                //         userId: userResponseData.userId
-                //     }
-                // });
-            }
-        }, 1000);
-    }, [restSuccess])
-
     const handleChange = (event, property) => {
         setData({
             ...data,
@@ -82,15 +67,11 @@ const LoginComponent = (props) => {
         loginUser(data)
             .then((response) => {
                 console.log(response);
-                // setUserResponseData({
-                //     email: data.email,
-                //     userId: response.userId
-                // });
-                setIsLoading(false);
                 setData({
                     email: '',
                     password: ''
                 })
+                navigate('/user/dashboard')
             })
             .catch((error) => {
                 handleRestError(error);

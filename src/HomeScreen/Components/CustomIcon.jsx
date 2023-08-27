@@ -3,7 +3,7 @@ import '../Styles/CustomIcon.css'
 
 const CustomIcon = (props) => {
     return (
-        <div className='parent-div'>
+        <div onClick={props.onClick} className='parent-div'>
             <div className='custom-icon-main-div'>
                 <img src={props.icon} alt="" />
             </div>

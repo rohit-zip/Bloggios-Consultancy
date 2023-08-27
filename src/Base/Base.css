@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+
 body {
     font-family: 'Inter', sans-serif;
+}
+
+body.y-hidden {
+    overflow-y: hidden;
 }
 
 div.homescreen-backdrop {
@@ -10,6 +15,7 @@ div.homescreen-backdrop {
     width: 100vw;
     display: flex;
     flex-direction: column;
+    overflow-y: var(--y-overflow);
 }
 
 ::-webkit-scrollbar {

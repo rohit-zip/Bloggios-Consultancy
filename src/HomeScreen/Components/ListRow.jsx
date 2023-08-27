@@ -3,7 +3,7 @@ import React from 'react'
 
 const ListRow = (props) => {
   return (
-    <div className='list-row'>
+    <div onClick={props.onClick} className='list-row'>
       <div>
         <img className='images' src={props.image} alt={props.alt} />
       </div>
@@ -12,7 +12,7 @@ const ListRow = (props) => {
           <div>{props.title}</div>
           <span>{props.body}</span>
         </div>
-        <button>Learn more</button>
+        <button onClick={props.buttonClick}>Learn more</button>
       </div>
     </div>
   )

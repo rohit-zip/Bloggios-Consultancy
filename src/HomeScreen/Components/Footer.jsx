@@ -1,7 +1,10 @@
 import React from 'react'
 import '../Styles/Footer.css'
+import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
+
+    const navigate = useNavigate()
 
     return (
         <section className='bloggios-landing-footer'>
@@ -19,28 +22,28 @@ const Footer = () => {
                     <div className="col">
                         <span>Dev Service</span>
                         <div>
-                            <span>Web Development</span>
-                            <span>App Development</span>
-                            <span>Backend</span>
-                            <span>Frontend</span>
+                            <span onClick={() => navigate('services/web-devlopment')}>Web Development</span>
+                            <span onClick={() => navigate('services/app-devlopment')}>App Development</span>
+                            <span onClick={() => navigate('services/backend')}>Backend</span>
+                            <span onClick={() => navigate('services/frontend')}>Frontend</span>
                         </div>
                     </div>
                     <div className="col">
                         <span>Resources</span>
                         <div>
-                            <span>Pricing</span>
-                            <span>Blog</span>
-                            <span>Projects</span>
-                            <span>About</span>
+                            <span onClick={() => navigate('pricing')}>Pricing</span>
+                            <span onClick={() => navigate('blogs')}>Blog</span>
+                            <span onClick={() => navigate('projects')}>Projects</span>
+                            <span onClick={() => navigate('about')}>About</span>
                         </div>
                     </div>
                     <div className="col">
                         <span>Learn</span>
                         <div>
-                            <span>Instructor</span>
-                            <span>Learner</span>
-                            <span>Courses</span>
-                            <span>Free Resource</span>
+                            <span onClick={() => navigate('learn/instructor')}>Instructor</span>
+                            <span onClick={() => navigate('learn/learner')}>Learner</span>
+                            <span onClick={() => navigate('learn/courses')}>Courses</span>
+                            <span onClick={() => navigate('learn/resources')}>Free Resource</span>
                         </div>
                     </div>
                 </div>
