@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SignupScreen from './Authentication/SignUp/SignupScreen';
 import OtpScreen from './Authentication/SignUp/OtpScreen';
 import ServicesScreen from './Screen/ServicesScreen';
+import LoginScreen from './Authentication/Login/LoginScreen';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path='/signup' element={<SignupScreen />} />
         <Route path='/otp' element={<OtpScreen />} />
         <Route path='/services' element={<ServicesScreen />} />
+        <Route path="/login" element={<LoginScreen />} />
       </Routes>
     </BrowserRouter>
   )
