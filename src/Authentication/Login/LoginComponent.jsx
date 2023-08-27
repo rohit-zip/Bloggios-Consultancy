@@ -8,6 +8,7 @@ import { Alert, Collapse, IconButton } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from 'react-router-dom'
 import { loginUser } from '../../Services/RestServices/AuthServer'
+import { GOOGLE_AUTH_URL } from '../../Services/RestServices/RestService'
 
 
 const LoginComponent = (props) => {
@@ -113,7 +114,7 @@ const LoginComponent = (props) => {
                 display: isLoading ? 'flex' : 'none',
                 backgroundColor: isLoading ? 'rgba(0, 0, 0, 0.4)' : 'transparent',
                 filter: 'blur(80px)',
-                webkitFilter: 'blur(80px)'
+                webKitFilter: 'blur(80px)'
             }}></div>
             <div style={{
                 position: 'absolute', bottom: '40px', left: '50%', transform: 'translateX(-50%)'
@@ -158,7 +159,9 @@ const LoginComponent = (props) => {
                             <span>or</span>
                             <div className='post-or'></div>
                         </div>
-                        <button className='social-signup-button'>Login with Google</button>
+                        <a href={GOOGLE_AUTH_URL}>
+                            <button className='social-signup-button' >Login with Google</button>
+                        </a>
                     </div>
                     <div className="col">
                         <img src={login_image} alt="" />

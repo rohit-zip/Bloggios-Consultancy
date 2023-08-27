@@ -6,6 +6,7 @@ import OtpScreen from './Authentication/SignUp/OtpScreen';
 import ServicesScreen from './Screen/ServicesScreen';
 import LoginScreen from './Authentication/Login/LoginScreen';
 import ErrorScreen from './Screen/ErrorScreen';
+import OAuth2RedirectHandler from './Services/OAuthRedirectHandler';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/services' element={<ServicesScreen />} />
         <Route path="/login" element={<LoginScreen />} />
         <Route path="*" element={<ErrorScreen />} />
+        <Route path="/oauth2/redirect" Component={OAuth2RedirectHandler}></Route> 
       </Routes>
     </BrowserRouter>
   )

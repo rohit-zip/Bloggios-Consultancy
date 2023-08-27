@@ -7,6 +7,7 @@ import { signUp } from '../../../Services/RestServices/UserServiceApi'
 import { Alert, Collapse, IconButton } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from 'react-router-dom'
+import { GOOGLE_AUTH_URL } from '../../../Services/RestServices/RestService'
 
 
 const Signup = (props) => {
@@ -128,7 +129,7 @@ const Signup = (props) => {
                 display: isLoading ? 'flex' : 'none',
                 backgroundColor: isLoading ? 'rgba(0, 0, 0, 0.4)' : 'transparent',
                 filter: 'blur(80px)',
-                webkitFilter: 'blur(80px)'
+                webKitFilter: 'blur(80px)'
             }}></div>
             <div style={{
                 position: 'absolute', right: '20px', top: '100px'
@@ -173,7 +174,9 @@ const Signup = (props) => {
                             <span>or</span>
                             <div className='post-or'></div>
                         </div>
-                        <button className='social-signup-button'>Continue with Google</button>
+                        <a href={GOOGLE_AUTH_URL}>
+                            <button className='social-signup-button'>Continue with Google</button>
+                        </a>
                     </div>
                     <div className="col">
                         <img src={coding_image} alt="" />

@@ -18,7 +18,7 @@ const ErrorScreen = () => {
                 <div>
                     <svg className='logo-svg' xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 300">
                         <symbol id="s-text">
-                            <text text-anchor="middle"
+                            <text textAnchor="middle"
                                 x="50%" y="10%" dy=".85em">
                                 BLOGGIOS
                             </text>
@@ -42,7 +42,7 @@ const ErrorScreen = () => {
                     <svg className='sub-logo-svg' xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 300">
 
                         <symbol id="a-text">
-                            <text text-anchor="middle"
+                            <text textAnchor="middle"
                                 x="50%" y="50%" dy=".15em">
                                 Coming Soon
                             </text>
