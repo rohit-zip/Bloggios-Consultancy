@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react'
-import '../Styles/Signup.css'
-import coding_image from '../../../Assets/SVG/undraw_sharing_knowledge_03vp.svg'
-import bloggios_logo from '../../../Assets/SVG/bloggios-white-purple-logo.svg'
-import CustomInputField from './CustomInputField'
-import { signUp } from '../../../Services/RestServices/UserServiceApi'
+import './Styles/Login.css'
+import login_image from '../../Assets/SVG/undraw_login_re_4vu2.svg'
+import bloggios_logo from '../../Assets/SVG/bloggios-white-purple-logo.svg'
+import CustomInputField from '../SignUp/Component/CustomInputField'
+import { signUp } from '../../Services/RestServices/UserServiceApi'
 import { Alert, Collapse, IconButton } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close';
 import { useNavigate } from 'react-router-dom'
+import { loginUser } from '../../Services/RestServices/AuthServer'
 
 
-const Signup = (props) => {
-
-    const fieldsList = props.fieldsList;
+const LoginComponent = (props) => {
 
     const [isVisible, setIsVisible] = useState(false);
     const [isErrorPassword, setIsErrorPassword] = useState(false);
@@ -48,12 +47,12 @@ const Signup = (props) => {
         setTimeout(() => {
             if (restSuccess) {
                 setRestSuccess(false);
-                navigate('/otp', {
-                    state: {
-                        userEmail: userResponseData.email,
-                        userId: userResponseData.userId
-                    }
-                });
+                // navigate('/dashboard', {
+                //     state: {
+                //         userEmail: userResponseData.email,
+                //         userId: userResponseData.userId
+                //     }
+                // });
             }
         }, 1000);
     }, [restSuccess])
@@ -65,31 +64,36 @@ const Signup = (props) => {
         })
     }
 
+    const handleRestError = (error) => {
+        console.log(error?.response?.status)
+        if (error.response.status === 401) {
+            setErrorData("Please Enter correct Login credentials");
+        } else {
+            setErrorData(error?.response?.data?.message);
+        }
+        setIsLoading(false);
+        setRestSuccess(false);
+        setRestError(true);
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault();
         setIsLoading(true);
-        signUp(data)
+        loginUser(data)
             .then((response) => {
                 console.log(response);
-                setUserResponseData({
-                    email: data.email,
-                    userId: response.userId
-                });
-                setRestError(false);
-                setRestSuccess(true);
+                // setUserResponseData({
+                //     email: data.email,
+                //     userId: response.userId
+                // });
                 setIsLoading(false);
-                setSuccessData(response.message);
                 setData({
                     email: '',
                     password: ''
                 })
             })
             .catch((error) => {
-                console.log(error?.response?.data?.message);
-                setErrorData(error?.response?.data?.message);
-                setIsLoading(false);
-                setRestError(true);
-                setRestSuccess(false);
+                handleRestError(error);
             })
     }
 
@@ -131,21 +135,21 @@ const Signup = (props) => {
                 webkitFilter: 'blur(80px)'
             }}></div>
             <div style={{
-                position: 'absolute', right: '20px', top: '100px'
+                position: 'absolute', bottom: '40px', left: '50%', transform: 'translateX(-50%)'
             }}>
                 {
                     restSuccess ? SuccessToast() : ErrorToast()
                 }
             </div>
-            <section className='auth-bloggios-signup'>
-                <div className='auth-signup-main-div'>
+            <section className='auth-bloggios-login'>
+                <div className='auth-login-main-div'>
                     <div className="col">
-                        <div className='signup-logo-div'>
+                        <div className='login-logo-div'>
                             <img src={bloggios_logo} alt="Bloggios" />
                             <span>BLOGGIOS</span>
                         </div>
-                        <div className='signup-greeting-div'>
-                            Welcome
+                        <div className='login-greeting-div'>
+                            Welcome Back
                         </div>
                         <div className='input-fields-signup'>
                             {inputList.map((value, key) => {
@@ -167,16 +171,16 @@ const Signup = (props) => {
                                 )
                             })}
                         </div>
-                        <button className='signup-button' onClick={(event) => handleSubmit(event)}>Sign Up</button>
+                        <button className='signup-button' onClick={(event) => handleSubmit(event)}>Login</button>
                         <div className='bloggios-divider'>
                             <div className='pre-or'></div>
                             <span>or</span>
                             <div className='post-or'></div>
                         </div>
-                        <button className='social-signup-button'>Continue with Google</button>
+                        <button className='social-signup-button'>Login with Google</button>
                     </div>
                     <div className="col">
-                        <img src={coding_image} alt="" />
+                        <img src={login_image} alt="" />
                     </div>
                 </div>
             </section>
@@ -184,7 +188,7 @@ const Signup = (props) => {
     )
 
     function ErrorToast() {
-        return <Collapse in={restError}>
+        return <Collapse sx={{ display: restError ? 'block' : 'none' }} in={restError}>
             <Alert
                 severity="error"
                 variant='filled'
@@ -206,7 +210,7 @@ const Signup = (props) => {
     }
 
     function SuccessToast() {
-        return <Collapse in={restSuccess}>
+        return <Collapse sx={{ display: restSuccess ? 'block' : 'none' }} in={restSuccess}>
             <Alert
                 severity="success"
                 variant='filled'
@@ -230,4 +234,4 @@ const Signup = (props) => {
 
 
 
-export default Signup
+export default LoginComponent
