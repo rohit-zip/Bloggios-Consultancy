@@ -14,6 +14,7 @@ nav.navbar-main {
     max-height: auto;
     font-size: inherit;
     font-family: 'Inter', sans-serif;
+
     display: block;
     position: relative;
     transition: padding 100ms ease-in-out
@@ -29,6 +30,7 @@ div.navbar-div {
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.8);
     user-select: none;
+    
     justify-content: space-between;
 }
 
@@ -153,10 +155,8 @@ div.navbar-items-mobile {
         align-items: center;
         min-width: 40px;
         min-height: 40px;
-        box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 4px 6px rgba(0, 0, 0, 0.45);
         font-size: 25px;
         border-radius: 10px;
-        border: 1px solid rgba(0, 0, 0, 0.2);
         border-style: rigeridge;
     }
 
@@ -168,7 +168,7 @@ div.navbar-items-mobile {
         left: 0;
         padding: 20px 4vw;
         margin: auto;
-        background-color: rgb(240, 240, 240);
+        background-color: #6072ff;
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         flex-direction: column;
@@ -179,6 +179,7 @@ div.navbar-items-mobile {
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         border-bottom: inset 1px rgba(0, 0, 0, 0.4) solid;
+        z-index: 1;
     }
 
     div.navbar-items-mobile>div {

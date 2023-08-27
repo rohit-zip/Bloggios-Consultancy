@@ -8,6 +8,7 @@ import flutter_icon from '../../Assets/SVG/flutter-svgrepo-com.svg'
 import javascript_icon from '../../Assets/SVG/js-svgrepo-com.svg'
 import docker_icon from '../../Assets/SVG/docker-svgrepo-com.svg'
 import ViewAllIcon from '../../Component/ViewAllIcon'
+import { useNavigate } from 'react-router-dom'
 
 const icon_list = [
     {
@@ -19,7 +20,7 @@ const icon_list = [
         icon: spring_icon
     },
     {
-        name: 'React JS',
+        name: 'React',
         icon: react_icon
     },
     {
@@ -37,6 +38,9 @@ const icon_list = [
 ]
 
 const Technologies = () => {
+
+    const navigate = useNavigate()
+
     return (
         <section className='technologies-main'>
             <div className='technologies-container'>
@@ -46,7 +50,7 @@ const Technologies = () => {
                     <div className='technologies-icons-list row row-cols-lg-4'>
                         {icon_list.map((value, key) => {
                             return (
-                                <CustomIcon key={key} icon={value.icon} name={value.name} />
+                                <CustomIcon key={key} onClick={() => navigate('technology/' + value.name.toLowerCase())} icon={value.icon} name={value.name} />
                             )
                         })}
                         <ViewAllIcon />

@@ -3,7 +3,7 @@ import './Navbar.css'
 import bloggios_logo from '../Assets/SVG/bloggios-logo.svg'
 import { useNavigate } from 'react-router-dom';
 
-const Navbar = ({ textColor, logo, dividerColor, lineColor, fontWeight }) => {
+const Navbar = ({ textColor, logo, dividerColor, lineColor, fontWeight, mobileColor }) => {
     const [isShown, setIsShown] = useState(false);
     const navigate = useNavigate();
 
@@ -25,7 +25,9 @@ const Navbar = ({ textColor, logo, dividerColor, lineColor, fontWeight }) => {
     ]
 
     return (
-        <nav className={`navbar-main ${isShown ? 'bloggios-bg-white-filter' : ''}`}>
+        <nav style={{
+            backgroundColor: mobileColor ? mobileColor : ''
+        }} className={`navbar-main ${isShown ? 'bloggios-bg-white-filter' : ''}`}>
             <div className='navbar-div'>
                 <div onClick={() => navigate('/')} className='navbar-icon-div'>
                     <img src={logo ? logo : bloggios_logo} alt="B" height='100%' />
@@ -51,11 +53,16 @@ const Navbar = ({ textColor, logo, dividerColor, lineColor, fontWeight }) => {
                         Get a Quote
                     </div>
                 </div>
-                <div className='navbar-hamburger' onClick={() => setIsShown(!isShown)}>
+                <div style={{
+                    color: textColor
+                }} className='navbar-hamburger' onClick={() => setIsShown(!isShown)}>
                     <i className={`fa-solid fa-bars ${isShown ? 'fa-xmark' : 'fa-bars'}`}></i>
                 </div>
-                <div className={`navbar-items-mobile ${isShown ? 'menu-shown' : ''}`}>
-                    <div>
+                <div style={{ backgroundColor: mobileColor }} className={`navbar-items-mobile ${isShown ? 'menu-shown' : ''}`}>
+                    <div style={{
+                        color: textColor,
+                        fontWeight: fontWeight
+                    }}>
                         {linksList.map((value, key) => {
                             return (
                                 <span key={key} onClick={() => navigate(value.link)}>{value.name}</span>

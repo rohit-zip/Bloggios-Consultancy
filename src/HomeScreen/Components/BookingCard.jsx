@@ -3,7 +3,7 @@ import '../Styles/BookingCard.css'
 
 const BookingCard = (props) => {
     return (
-        <div className='booking-card'>
+        <div onClick={props.onClick} className='booking-card'>
             <img className='icon-image' src={props.source} alt="headphone" />
             <div className='small-brief'>
                 <span className='booking-title'>{props.title}</span>
