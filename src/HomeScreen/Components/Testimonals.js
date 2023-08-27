@@ -2,14 +2,13 @@ import React, { Component } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import '../Styles/Testimonals.css';
+import man_sitting from '../../Assets/Image/images.jpeg'
+import tom from '../../Assets/Image/tom.jpg'
 
 
 export default class Testimonials extends Component {
   render() {
     return (
-      
-      
-      
       <Carousel
         showArrows={true}
         infiniteLoop={true}
@@ -17,9 +16,9 @@ export default class Testimonials extends Component {
         showStatus={false}
         autoPlay={true}
         interval={6100}
-        
+
       >
-        
+
         <div><h3><i>SEE WHAT OUR CLIENT SAY ABOUT US</i></h3>
           <img src="shutterstock_653970169.jpg" />
           <div className="myCarousel">
@@ -33,7 +32,7 @@ export default class Testimonials extends Component {
         </div>
 
         <div><h3><i>SEE WHAT OUR CLIENT SAY ABOUT US</i></h3>
-          <img src="images.jpeg" />
+          <img src={man_sitting} alt="bloggios" />
           <div className="myCarousel">
             <h3>Daniel Keystone</h3>
             <h4>Client</h4>
@@ -45,7 +44,7 @@ export default class Testimonials extends Component {
         </div>
 
         <div><h3><i>SEE WHAT OUR CLIENT SAY ABOUT US</i></h3>
-        <img src="images.jpeg" />
+          <img src={tom} />
           <div className="myCarousel">
             <h3>Theo Sorel</h3>
             <h4>Client</h4>
@@ -56,7 +55,7 @@ export default class Testimonials extends Component {
           </div>
         </div>
 
-        
+
       </Carousel>
     );
   }
