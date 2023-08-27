@@ -14,7 +14,6 @@ nav.navbar-main {
     max-height: auto;
     font-size: inherit;
     font-family: 'Inter', sans-serif;
-
     display: block;
     position: relative;
     transition: padding 100ms ease-in-out
@@ -30,7 +29,7 @@ div.navbar-div {
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.8);
     user-select: none;
-    
+
     justify-content: space-between;
 }
 
@@ -91,7 +90,7 @@ div.navbar-items>div>span::after {
 }
 
 div.navbar-items>div>span:hover {
-    opacity: 1
+    opacity: 1;
 }
 
 div.navbar-items>div>span:hover::after {
