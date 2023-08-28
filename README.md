@@ -2,7 +2,10 @@
   <h1>Bloggios Frontend</h1>
 </div>
 
+<div align="center">
+  <h2>Under Development</h2>
+</div>
 
 <div align="center">
-  <h2>Releasing Soon</h2>
+  <a href="bloggios.com">Website</a>
 </div>
