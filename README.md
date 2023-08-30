@@ -7,5 +7,5 @@
 </div>
 
 <div align="center">
-  <a href="bloggios.com">Website</a>
+  <a href="https://www.bloggios.com">Website</a>
 </div>
